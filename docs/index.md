@@ -13,7 +13,15 @@ Linux is an open source operating system with many different versions due to the
 
 There are several ways to install Linux:
 
-:::row:::
+1. [**Bare-Metal Linux**](https://www.linux.org/pages/download/)
+    You can directly install a Linux distribution for use as your primary operating system (OS), sometimes referred to as "bare-metal Linux". For a bare-metal install, download your preferred distribution on a machine with an existing OS and create a bootable drive, like a USB flash drive. (Here is link to [download the popular Ubuntu distribution](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview) as an example.)
+
+2. [**Windows Subsystem for Linux (WSL)**](/windows/wsl/install)<br>
+    You can install a Linux distribution to run side-by-side with your Windows OS using WSL. WSL enables you to avoid dual-booting by running Linux in an encapsulated environment, fully integrated with your favorite Windows tools. You can use a single command, `wsl â€“install` to install and get started with the default Ubuntu, or switch to the distribution of your choosing, running on an actual Linux kernel. Check out the [WSL docs](/windows/wsl/install) or [training course](/training/modules/wsl/wsl-introduction/) to learn more. If you are using a Mac, you may want to look into [Parallels](https://www.parallels.com/tips/windows-on-mac/linux/) for a similar type of integration.
+
+3. [**Linux Virtual Machine (VM) on Azure**](/azure/virtual-machines/linux/quick-create-portal?tabs=ubuntu)<br>
+    A VM is a digital version of a physical computer. There are many options for running Linux distributions via VM. Microsoft supports the ability to [create a Linux virtual machine in the Azure portal](/azure/virtual-machines/linux/quick-create-portal?tabs=ubuntu). Check out the [training course](/training/modules/create-linux-virtual-machine-in-azure/) that covers options available for Linux virtual machines in Azure, how to create a Linux VM using the Azure portal, how to connect to a running Linux VM using SSH, and how to install software and change the network configuration on a VM.
+<!-- :::row:::
     :::column:::
         [:::image type="icon" source="images/linux.png":::](https://www.linux.org/pages/download/)
 
@@ -32,7 +40,7 @@ There are several ways to install Linux:
         [**Linux Virtual Machine (VM) on Azure**](/azure/virtual-machines/linux/quick-create-portal?tabs=ubuntu)<br>
         A VM is a digital version of a physical computer. There are many options for running Linux distributions via VM. Microsoft supports the ability to [create a Linux virtual machine in the Azure portal](/azure/virtual-machines/linux/quick-create-portal?tabs=ubuntu). Check out the [training course](/training/modules/create-linux-virtual-machine-in-azure/) that covers options available for Linux virtual machines in Azure, how to create a Linux VM using the Azure portal, how to connect to a running Linux VM using SSH, and how to install software and change the network configuration on a VM.
     :::column-end:::
-:::row-end:::
+:::row-end::: -->
 
 ## Microsoft tools that run on Linux
 
@@ -44,7 +52,6 @@ Microsoft supports Linux with a variety of different tools and services. If youâ
 
         [**Install .NET on Linux**](/dotnet/core/install/linux)<br>
         Learn how to how to install .NET on various Linux distributions either manually, via a package manager, or via a container. .NET is a free and open-source development platform with languages, editors, and libraries to build for web, mobile, desktop, games, and IoT.
-
     :::column-end:::
     :::column:::
         [:::image type="icon" source="images/vscode.png":::](https://code.visualstudio.com/download)
@@ -58,7 +65,8 @@ Microsoft supports Linux with a variety of different tools and services. If youâ
         [**Install PowerShell on Linux**](/powershell/scripting/install/installing-powershell-on-linux)<br>
         PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management program. Learn how to install PowerShell on Linux and find the currently supported Linux distributions and package managers.
     :::column-end:::
-
+:::row-end:::
+:::row:::
     :::column:::
         [:::image type="icon" source="images/cpp.png":::](/cpp/linux/)
 
@@ -137,7 +145,7 @@ A variety of Linux-related training is available from Microsoft, including:
         Windows Subsystem for Linux (WSL) now supports running Linux GUI applications (X11 and Wayland) on Windows in a fully integrated desktop experience.
     :::column-end:::
     :::column:::
-        [:::image type="icon" source="images/tutorials-wsl-docker.png":::](/windows/wsl/tutorials/wsl-containers)
+        [:::image type="icon" source="images/tutorial-wsl-docker.png":::](/windows/wsl/tutorials/wsl-containers)
 
         [**Get started with Docker remote containers on Linux with WSL**](/windows/wsl/tutorials/wsl-containers)<br>
         Docker Desktop for Windows provides a development environment for building, shipping, and running dockerized apps. By enabling the WSL 2 based engine, you can run both Linux and Windows containers in Docker Desktop on the same machine.
@@ -162,7 +170,7 @@ Microsoft has a [long history with Linux and Open Source](https://www.theverge.c
         Read the latest updates about Windows Subsystem for Linux, Windows Terminal, and Windows Package Manager.
     :::column-end:::
     :::column:::
-        [:::image type="icon" source="images/":::](https://ubuntu.com/blog/tag/microsoft)
+        [:::image type="icon" source="images/microsoft-canonical.png":::](https://ubuntu.com/blog/tag/microsoft)
 
         [**Ubuntu Blog: Microsoft**](https://ubuntu.com/blog/tag/microsoft)<br>
         Read the latest news related to the partnership between Canonical and Microsoft.
@@ -176,13 +184,13 @@ Microsoft has a [long history with Linux and Open Source](https://www.theverge.c
         Original announcement about Microsoft joining the Linux Foundation from November 2016.
     :::column-end:::
     :::column:::
-        [:::image type="icon" source="images/":::](https://cloudblogs.microsoft.com/opensource/2019/08/21/microsoft-partners-linux-foundation-announce-confidential-computing-consortium/)
+        [:::image type="icon" source="images/microsoft-linux-consortium.png":::](https://cloudblogs.microsoft.com/opensource/2019/08/21/microsoft-partners-linux-foundation-announce-confidential-computing-consortium/)
 
         [**Microsoft joins partners and the Linux Foundation to create Confidential Computing Consortium**](https://cloudblogs.microsoft.com/opensource/2019/08/21/microsoft-partners-linux-foundation-announce-confidential-computing-consortium/)<br>
         Original announcement about Microsoft and Linux Foundation partnering to create the Confidential Computing Consortium, dedicated to defining and accelerating the adoption of confidential computing.
     :::column-end:::
     :::column:::
-        [:::image type="icon" source="images/":::](https://www.linuxfoundation.org/press/press-release/the-open-3d-foundation-welcomes-microsoft-as-a-premier-member-to-advance-the-future-of-open-source-3d-development)
+        [:::image type="icon" source="images/open3dfoundation.png":::](https://www.linuxfoundation.org/press/press-release/the-open-3d-foundation-welcomes-microsoft-as-a-premier-member-to-advance-the-future-of-open-source-3d-development)
 
         [**Open 3D Foundation Welcomes Microsoft**](https://www.linuxfoundation.org/press/press-release/the-open-3d-foundation-welcomes-microsoft-as-a-premier-member-to-advance-the-future-of-open-source-3d-development)<br>
         Original announcement about Microsoft joining over 25 organizations committed to democratizing 3D software development for games and simulations.
