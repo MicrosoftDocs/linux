@@ -1,2 +1,19 @@
-- name: Index
+- name: Linux resources at Microsoft
   href: index.md
+  items:
+  - name: Install Linux
+    href: ./install.md
+  - name: Windows Subsystem for Linux
+    href: /windows/wsl
+  - name: Linux VMs in Azure
+    href: /azure/virtual-machines
+  - name: Microsoft Open Source Blog
+    href: https://cloudblogs.microsoft.com/opensource
+  - name: .NET on Linux
+    href: /dotnet/core/install/linux
+  - name: Visual Studio Code on Linux
+    href: https://code.visualstudio.com/docs/setup/linux
+  - name: PowerShell on Linux
+    href: /powershell/scripting/install/installing-powershell-on-linux
+  - name: Mariner Linux Distribution
+    href: /azure/aks/use-mariner

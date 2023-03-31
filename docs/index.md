@@ -16,7 +16,7 @@ Microsoft offers a variety of resources to support Linux users, including:
 - [Get started with Linux](#get-started-with-linux)
 - [Microsoft tools that run on Linux](#microsoft-tools-that-run-on-linux)
 - [Linux-related training at Microsoft](#linux-related-training-at-microsoft)
-- Learn more about [Open Source at Microsoft](https://opensource.microsoft.com/)
+- [Microsoft + Linux partnerships, open source news, events, and history](#microsoft--linux-news-events-and-partnerships)
 
 ![Photo of Satya Nadela ](./images/satya.png)
 
@@ -154,9 +154,9 @@ A variety of Linux-related training is available from Microsoft, including:
     :::column-end:::
 :::row-end:::
 
-## Microsoft + Linux partnerships
+## Microsoft + Linux news, events, and partnerships
 
-Microsoft has a [long history with Linux and Open Source](https://www.theverge.com/2020/5/18/21262103/microsoft-open-source-linux-history-wrong-statement). Posts about the more recent history of Microsoft's relationship with Linux and the Open Source community can be found below.
+Microsoft is one of the biggest contributors to open source projects in the world. Learn more about Microsoft + Linux partnerships, Open Source news, events, and history.
 
 :::row:::
     :::column:::

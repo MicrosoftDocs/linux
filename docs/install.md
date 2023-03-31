@@ -58,6 +58,8 @@ To install Linux on a Windows PC, use the install Linux command.
 2. Enter the Linux install command: `wsl --install`.
 3. Restart your machine.
 
+![WSL Linux Install Command screenshot](./images/wsl-install-screenshot.png)
+
 ### Install Linux command options
 
 By default, the install command will use the Ubuntu distribution of Linux. You can see the other distributions that are available in the Microsoft Store by entering the command: `wsl -l -o`. If you'd like to install a distribution other than Ubuntu, just add `-d` to the command with the name of the distribution you'd like to install:
@@ -85,6 +87,8 @@ Azure supports a variety of options for setting up Linux VMs in the cloud. For a
 
 If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin. If you're new to creating Linux VMs with Azure, you can [learn more about VMs](https://azure.microsoft.com/resources/cloud-computing-dictionary/what-is-a-virtual-machine) or check out the online training course: [Create a Linux virtual machine in Azure](/training/modules/create-linux-virtual-machine-in-azure/).
 
+![Create a Linux VM on Azure screenshot](./images/create-linux-vm-on-azure.png)
+
 ## Create a Linux Virtual Machine locally using a hypervisor
 
 To create a Linux VM that is hosted on your local machine using a hypervisor, you can use:
@@ -96,6 +100,8 @@ To create a Linux VM that is hosted on your local machine using a hypervisor, yo
 You will need to check the hardware requirements for your chosen hypervisor. Once the hypervisor is enabled or installed, you will need to choose the type of OS that you want to install and the installation source (this is typically a .iso or .vhdx file). You will need to give the VM a name, select the directory where files will be hosted, select the amount of memory to allocate to the VM and the size of the virtual hard drive where files will be stored (you can typically choose between a fixed or dynamically allocated amount of drive space). Sometimes integrations with a Linux virtual machine can be tricky due to display drivers and other hardware dependencies, but most hypervisors have an active user community that can help. You may also need to set up a virtual network if you want your VM to connect to the internet.
 
 If you're new to hypervisors and want to learn more, try the free online training module: [Configure and manage Hyper-V virtual machines](/training/modules/configure-manage-hyper-v-virtual-machines/).
+
+![Hyper-V install screenshot](./images/hyperv-install-screenshot.png)
 
 ## Create a bootable USB drive to install bare-metal Linux
 
@@ -110,6 +116,10 @@ If you want bare-metal Linux, whether to run a distribution alone on a device or
 4. Select install options.
     Typically the installer for your Linux distribution will include a set of installation steps that will involve choosing options about whether you want to include certain features, third-party software packages, etc. You may also need to specify whether to erase the disk in the case that this Linux distro will be the only operating system, or to use a partition, if you plan to run multiple operating systems. You may also be asked about whether you'd like to enable encryption.
 5. Finally, as with any Linux installation, you will be asked to create a user name and password.
+
+![Create a bootable USB screenshot](./images/usb-setup-screenshot.png)
+
+![Ubuntu install screenshot](./images/ubuntu-install-screenshot.png)
 
 ## After installing Linux
 
