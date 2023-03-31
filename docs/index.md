@@ -1,46 +1,34 @@
+---
+title: Linux resources at Microsoft
+description: Microsoft offers resources to get you started using Linux, install tools that run on Linux, complete Linux-related training courses, learn about the Mariner Linux distribution supported by Microsoft, and find info about Microsoft Open Source news, events, and history.
+author: mattwojo 
+ms.author: mattwoj 
+manager: jken
+ms.topic: article
+ms.technology: linux
+ms.date: 03/28/2023
+---
+
 # Linux resources at Microsoft
 
 Microsoft offers a variety of resources to support Linux users, including:
 
-- [How to download and install a Linux distribution and get started](#how-to-install-linux-and-get-started)
+- [Get started with Linux](#get-started-with-linux)
 - [Microsoft tools that run on Linux](#microsoft-tools-that-run-on-linux)
 - [Linux-related training at Microsoft](#linux-related-training-at-microsoft)
 - Learn more about [Open Source at Microsoft](https://opensource.microsoft.com/)
 
-## How to install Linux and get started
+![Photo of Satya Nadela ](./images/satya.png)
 
-Linux is an open source operating system with many different versions due to the nature of being open source and fully customizable. The different versions of Linux are called "distributions" (sometimes shortened to “distros”). A few popular examples of Linux distributions include Ubuntu, Debian, Kali, OpenSUSE, or Fedora.
+## Get started with Linux
 
-There are several ways to install Linux:
+Linux is an open source operating system with many different versions due to the nature of being open source and fully customizable. The different versions of Linux are called "distributions" (sometimes shortened to “distros”). There are several different ways to install and run a distribution of the Linux operating system, including:
 
-1. [**Bare-Metal Linux**](https://www.linux.org/pages/download/)
-    You can directly install a Linux distribution for use as your primary operating system (OS), sometimes referred to as "bare-metal Linux". For a bare-metal install, download your preferred distribution on a machine with an existing OS and create a bootable drive, like a USB flash drive. (Here is link to [download the popular Ubuntu distribution](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview) as an example.)
+- Windows Subsystem for Linux (WSL) if you want a simple install that is integrated with Windows.
+- Create a Virtual Machine (VM) either locally with a hypervisor or in the cloud with a service like Azure.
+- Bare-metal installation if you want to run Linux alone without any other operating system (or if you want to dual-boot, which we no longer recommend).
 
-2. [**Windows Subsystem for Linux (WSL)**](/windows/wsl/install)<br>
-    You can install a Linux distribution to run side-by-side with your Windows OS using WSL. WSL enables you to avoid dual-booting by running Linux in an encapsulated environment, fully integrated with your favorite Windows tools. You can use a single command, `wsl –install` to install and get started with the default Ubuntu, or switch to the distribution of your choosing, running on an actual Linux kernel. Check out the [WSL docs](/windows/wsl/install) or [training course](/training/modules/wsl/wsl-introduction/) to learn more. If you are using a Mac, you may want to look into [Parallels](https://www.parallels.com/tips/windows-on-mac/linux/) for a similar type of integration.
-
-3. [**Linux Virtual Machine (VM) on Azure**](/azure/virtual-machines/linux/quick-create-portal?tabs=ubuntu)<br>
-    A VM is a digital version of a physical computer. There are many options for running Linux distributions via VM. Microsoft supports the ability to [create a Linux virtual machine in the Azure portal](/azure/virtual-machines/linux/quick-create-portal?tabs=ubuntu). Check out the [training course](/training/modules/create-linux-virtual-machine-in-azure/) that covers options available for Linux virtual machines in Azure, how to create a Linux VM using the Azure portal, how to connect to a running Linux VM using SSH, and how to install software and change the network configuration on a VM.
-<!-- :::row:::
-    :::column:::
-        [:::image type="icon" source="images/linux.png":::](https://www.linux.org/pages/download/)
-
-        [**Bare-Metal Linux**](https://www.linux.org/pages/download/)<br>
-        You can directly install a Linux distribution for use as your primary operating system (OS), sometimes referred to as "bare-metal Linux". For a bare-metal install, download your preferred distribution on a machine with an existing OS and create a bootable drive, like a USB flash drive. (Here is link to [download the popular Ubuntu distribution](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview) as an example.)
-    :::column-end:::
-    :::column:::
-        [:::image type="icon" source="images/wsl.png":::](/windows/wsl/install)
-
-        [**Windows Subsystem for Linux (WSL)**](/windows/wsl/install)<br>
-        You can install a Linux distribution to run side-by-side with your Windows OS using WSL. WSL enables you to avoid dual-booting by running Linux in an encapsulated environment, fully integrated with your favorite Windows tools. You can use a single command, `wsl –install` to install and get started with the default Ubuntu, or switch to the distribution of your choosing, running on an actual Linux kernel. Check out the [WSL docs](/windows/wsl/install) or [training course](/training/modules/wsl/wsl-introduction/) to learn more. If you are using a Mac, you may want to look into [Parallels](https://www.parallels.com/tips/windows-on-mac/linux/) for a similar type of integration.
-    :::column-end:::
-    :::column:::
-        [:::image type="icon" source="images/linux-vm-on-azure.png":::](/azure/virtual-machines/linux/quick-create-portal?tabs=ubuntu#)
-
-        [**Linux Virtual Machine (VM) on Azure**](/azure/virtual-machines/linux/quick-create-portal?tabs=ubuntu)<br>
-        A VM is a digital version of a physical computer. There are many options for running Linux distributions via VM. Microsoft supports the ability to [create a Linux virtual machine in the Azure portal](/azure/virtual-machines/linux/quick-create-portal?tabs=ubuntu). Check out the [training course](/training/modules/create-linux-virtual-machine-in-azure/) that covers options available for Linux virtual machines in Azure, how to create a Linux VM using the Azure portal, how to connect to a running Linux VM using SSH, and how to install software and change the network configuration on a VM.
-    :::column-end:::
-:::row-end::: -->
+For step-by-step guidance on how to get started, see [How to download and install Linux](./install.md).
 
 ## Microsoft tools that run on Linux
 
@@ -68,42 +56,16 @@ Microsoft supports Linux with a variety of different tools and services. If you�
 :::row-end:::
 :::row:::
     :::column:::
-        [:::image type="icon" source="images/cpp.png":::](/cpp/linux/)
+        [:::image type="icon" source="images/mariner.png":::](/dotnet/core/install/linux)
 
-        [**Create and debug applications for Linux using C++ in Visual Studio**](/cpp/linux/)<br>
-        Use C++ in Visual Studio to create and debug applications for a Linux-based operating system. Learn how to [Download, install, and set up the Linux workload](/cpp/linux/download-install-and-setup-the-linux-development-workload), [Connect to your target Linux system](/cpp/linux/connect-to-your-remote-linux-computer), [Create, Configure, and Deploy a Linux project](/cpp/linux/create-a-new-linux-project), and more.
+        [**CBL-Mariner**](https://github.com/microsoft/CBL-Mariner)<br>
+        Mariner is an open-source Linux distribution created by Microsoft. Mariner is now available for preview as a boot-able Linux image that can be used as a container host on Azure Kubernetes Service (AKS). [Learn more about Mariner](/azure/aks/use-mariner).
     :::column-end:::
     :::column:::
-        [:::image type="icon" source="images/nodejs.png":::](/windows/dev-environment/javascript/nodejs-on-wsl)
-
-        [**Install Node.js on Linux with WSL**](/windows/dev-environment/javascript/nodejs-on-wsl)<br>
-        Node.js is an open-source, cross-platform, server-side JavaScript runtime environment, often used for building fast, scalable web applications. Learn how to install Node.js on a Linux distribution using WSL, nvm, and npm.
+              
     :::column-end:::
     :::column:::
-        [:::image type="icon" source="images/react-logo.png":::](/windows/dev-environment/javascript/react-on-wsl)
-
-        [**Install React on Linux with WSL**](/windows/dev-environment/javascript/react-on-wsl)<br>
-        React is an open-source JavaScript library for building front end user interfaces. Learn how to install React on a Linux distribution using WSL, npx, and create-react-app.
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        [:::image type="icon" source="images/python-logo.png":::](/windows/python/web-frameworks)
-
-        [**Install Python on Linux with WSL**](/windows/python/web-frameworks)<br>
-        Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. It is open-source and a popular option for web development using Linux along with frameworks like Django and Flask. Learn how to install Python, Django, and Flask using WSL, pip, and venv.
-    :::column-end:::
-    :::column:::
-        [:::image type="icon" source="images/vue-logo.png":::](/windows/dev-environment/javascript/vue-on-wsl)
-
-        [**Install Vue.js on Linux with WSL**](/windows/dev-environment/javascript/vue-on-wsl)<br>
-        Vue is an open-source, front end JavaScript framework for building user interfaces and single-page applications on the web. Learn how to install Vue.js, the Vue CLI, and the Node.js dependencies using WSL. 
-    :::column-end:::
-    :::column:::
-        [:::image type="icon" source="images/docker-logo.png":::](/windows/wsl/tutorials/wsl-containers)
-
-        [**Install Docker on Linux with WSL**](/windows/wsl/tutorials/wsl-containers)<br>
-        Docker is an open platform for developing, shipping, and running applications, providing the ability to package and run an application in a loosely isolated environment called a container. Learn how to install Docker on Linux using WSL and Docker Desktop for Windows.
+        
     :::column-end:::
 :::row-end:::
 
@@ -149,6 +111,46 @@ A variety of Linux-related training is available from Microsoft, including:
 
         [**Get started with Docker remote containers on Linux with WSL**](/windows/wsl/tutorials/wsl-containers)<br>
         Docker Desktop for Windows provides a development environment for building, shipping, and running dockerized apps. By enabling the WSL 2 based engine, you can run both Linux and Windows containers in Docker Desktop on the same machine.
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [:::image type="icon" source="images/cpp.png":::](/cpp/linux/)
+
+        [**Create and debug applications for Linux using C++ in Visual Studio**](/cpp/linux/)<br>
+        Use C++ in Visual Studio to create and debug applications for a Linux-based operating system. Learn how to [Download, install, and set up the Linux workload](/cpp/linux/download-install-and-setup-the-linux-development-workload), [Connect to your target Linux system](/cpp/linux/connect-to-your-remote-linux-computer), [Create, Configure, and Deploy a Linux project](/cpp/linux/create-a-new-linux-project), and more.
+    :::column-end:::
+    :::column:::
+        [:::image type="icon" source="images/nodejs.png":::](/windows/dev-environment/javascript/nodejs-on-wsl)
+
+        [**Install Node.js on Linux with WSL**](/windows/dev-environment/javascript/nodejs-on-wsl)<br>
+        Node.js is an open-source, cross-platform, server-side JavaScript runtime environment, often used for building fast, scalable web applications. Learn how to install Node.js on a Linux distribution using WSL, nvm, and npm.
+    :::column-end:::
+    :::column:::
+        [:::image type="icon" source="images/react-logo.png":::](/windows/dev-environment/javascript/react-on-wsl)
+
+        [**Install React on Linux with WSL**](/windows/dev-environment/javascript/react-on-wsl)<br>
+        React is an open-source JavaScript library for building front end user interfaces. Learn how to install React on a Linux distribution using WSL, npx, and create-react-app.
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [:::image type="icon" source="images/python-logo.png":::](/windows/python/web-frameworks)
+
+        [**Install Python on Linux with WSL**](/windows/python/web-frameworks)<br>
+        Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. It is open-source and a popular option for web development using Linux along with frameworks like Django and Flask. Learn how to install Python, Django, and Flask using WSL, pip, and venv.
+    :::column-end:::
+    :::column:::
+        [:::image type="icon" source="images/#g":::](/windows/dev-environment/javascript/vue-on-wsl)
+
+        [**Install Vue.js on Linux with WSL**](/windows/dev-environment/javascript/vue-on-wsl)<br>
+        Vue is an open-source, front end JavaScript framework for building user interfaces and single-page applications on the web. Learn how to install Vue.js, the Vue CLI, and the Node.js dependencies using WSL. 
+    :::column-end:::
+    :::column:::
+        [:::image type="icon" source="images/docker-icon.png":::](/windows/wsl/tutorials/wsl-containers)
+
+        [**Install Docker on Linux with WSL**](/windows/wsl/tutorials/wsl-containers)<br>
+        Docker is an open platform for developing, shipping, and running applications, providing the ability to package and run an application in a loosely isolated environment called a container. Learn how to install Docker on Linux using WSL and Docker Desktop for Windows.
     :::column-end:::
 :::row-end:::
 
