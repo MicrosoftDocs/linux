@@ -18,23 +18,41 @@ To install Linux, you will need to:
 1. [Choose an install method](#choose-a-method-to-install-linux): Windows Subsystem for Linux (WSL), Bare metal Linux; or creating a Virtual Machine (VM) to run Linux in the cloud.
 2. [Choose a Linux distribution](#choose-a-linux-distribution): Ubuntu, Debian, Kali Linux, OpenSUSE, etc.
 3. Follow the steps for your preferred install method:
-    - [Use the install Linux command with Windows Subsystem for Linux (WSL)]()
-    - [Create a bootable USB to install bare-metal Linux]()
-    - [Create a Linux Virtual Machine (VM)]()
+    - [Use the install Linux command with Windows Subsystem for Linux (WSL)](#install-linux-with-windows-subsystem-for-linux)
+    - [Create a Linux Virtual Machine (VM)](#create-a-virtual-machine-vm)
+    - [Create a bootable USB to install bare-metal Linux](#create-a-bootable-usb-drive-to-install-bare-metal-linux)
 
 ## Choose a method to install Linux
 
-- **Windows Subsystem for Linux (WSL)**: This is the most simple install method. Just run the Linux install command: `wsl --install` to install the Ubuntu distribution. This method uses virtualization to integrate the Windows operating system (OS) with the Linux OS (running on an actual Linux kernel). You can add as many different Linux distributions as you please and run your favorite Linux tools, including GUI apps, alongside your favorite Windows tools. You can also mix and match Bash and PowerShell commands in the same command line. A Linux file system hosts your project files, while a separate Windows file systems hosts any developer tools, such as VS Code, that you'd like to work on the files with. This method of running Linux is highly efficient and performant. Once you choose a Linux distribution or opt to use the default Ubuntu distro, follow the instructions to [Use the install Linux command with Windows Subsystem for Linux](#use-the-install-linux-command-with-windows-subsystem-for-linux) or learn more in the [WSL documentation](/windows/wsl).
+If you are brand new to using Linux, we recommend starting with Windows Subsystem for Linux (WSL) as it's the easiest way to get up and running. If you are working in a business environment with more complex needs related to scale or security, we recommend running Linux as a Virtual Machine (VM) in the cloud and checking out the support that Azure has to offer. This also applies if you want to run Linux as a server. If you want to run Linux as your primary operating system, don't have a need to access Windows tools, and are good with a slightly more complicated install process, you can run Linux on bare metal to access the full potential of your hardware without any overhead from virtualization or emulation. Ultimately the choice depends on your needs and preferences.
 
-- **Create a Virtual Machine (VM)**: A VM is a digital version of a physical computer and is a popular option for running Linux. Like with WSL, you can create VM instances of as many different Linux distributions as you'd like, running them in an isolated environment, free from any conflicts and great for software development testing. While running a Linux distribution on WSL has slightly faster performance, a Linux VM is easier to clone or migrate. You can create a virtual machine on a cloud service like Azure or on your local machine, using a virtualization service.
+### Windows Subsystem for Linux (WSL)
 
-Creating a VM on Azure means that it's hosted in the cloud, on Microsoft's servers. You are essentially renting computing resources from Microsoft and using them to run the VM. This can be convenient if you need to quickly provision a new VM or need to run a workload that requires more computing resources than your local computer can provide. Larger businesses with more complex needs often choose to run Linux VMs on Azure for its scalability, control and abundance of features.
+This is the most simple install method. Just run the Linux install command: `wsl --install` to install the Ubuntu distribution. This method uses virtualization to integrate the Windows operating system (OS) with the Linux OS (running on an actual Linux kernel). You can add as many different Linux distributions as you please and run your favorite Linux tools, including GUI apps, alongside your favorite Windows tools. You can also mix and match Bash and PowerShell commands in the same command line. A Linux file system hosts your project files, while a separate Windows file systems hosts any developer tools, such as VS Code, that you'd like to work on the files with. This method of running Linux is highly efficient and performant. Once you choose a Linux distribution or opt to use the default Ubuntu distro, follow the instructions to [Use the install Linux command with Windows Subsystem for Linux](#use-the-install-linux-command-with-windows-subsystem-for-linux) or learn more in the [WSL documentation](/windows/wsl).
+
+![WSL install command screenshot](./images/wsl-install-command-screenshot.png)
+
+### Create a Virtual Machine (VM)
+
+A VM is a digital version of a physical computer and is a popular option for running Linux. Like with WSL, you can create VM instances of as many different Linux distributions as you'd like, running them in an isolated environment, free from any conflicts and great for software development testing. While running a Linux distribution on WSL has slightly faster performance, a Linux VM is easier to clone or migrate. You can create a virtual machine on a cloud service like Azure or on your local machine, using a virtualization service.
+
+Creating a VM on Azure means that it's hosted in the cloud, on Microsoft's servers. You are essentially renting computing resources from Microsoft and using them to run the VM. This can be convenient if you need to quickly provision a new VM or need to run a workload that requires more computing resources than your local computer can provide. Larger businesses with more complex needs often choose to run Linux VMs on Azure for its scalability, control and abundance of features. Learn more about the architecture, workflow, and considerations to [Run a Linux VM on Azure](/azure/architecture/reference-architectures/n-tier/linux-vm).
 
 Creating a VM on your local machine requires virtualization using a hypervisor. Windows includes a "type 1" hypervisor called [Hyper-V](/virtualization/hyper-v-on-windows/) to run virtualization directly on your device hardware.There are also "type 2" hypervisors that run on top of the operating system, like VirtualBox or VMware. You are responsible for managing the virtual machine, including allocating resources like memory and disk space, and ensuring that it is secure and up-to-date. This requires more technical expertise than some of the other options and may not be as scalable or fault-tolerant.
 
 Once you've chosen a distribution and decided whether you want to run the VM locally, using a hypervisor, or in the cloud, using Azure, follow the instructions to [Create a Linux Virtual Machine](#create-a-linux-virtual-machine).
 
-- **Bare metal Linux**: Bare metal Linux just means that Linux is running directly on the device hardware. This install method requires you to create a bootable USB drive by downloading an iso install file from the site hosting your chosen Linux distribution. You will need to use a Windows computer (or any desktop device with an existing OS) to create this drive. Many users choose the traditional method of installing bare metal Linux on a device that is also running Windows and using the **"dual boot"** method. To dual boot Linux and Windows, you need to partition your hard drive to create separate spaces for both the Linux and Windows OS. The performance speed between WSL, virtual machines, and bare metal Linux has become so close that few developers choose this method due to the overhead of needing to restart (reboot) your device any time you want to switch between the operating systems. **//TO-DO: Are there any exceptions to list here where someone would want to choose a bare metal install over WSL?** You can find a list of [Popular Linux Distributions available for download on Linux.org](https://linux.org/pages/download/). Once you've chosen a distro, follow the instructions to [Create a bootable USB to install bare-metal Linux](#create-a-bootable-usb-to-install-bare-metal-linux).
+![Create a Linux VM on Azure screenshot](./images/create-linux-vm-on-azure.png)
+
+### Bare metal Linux
+
+Bare metal Linux just means that Linux is running directly on the device hardware. This install method requires you to create a bootable USB drive by downloading an iso install file from the site hosting your chosen Linux distribution. You will need to use a Windows computer (or any desktop device with an existing OS) to create this drive.
+
+Many users choose the traditional method of installing bare metal Linux on a device that is also running Windows and using the **"dual boot"** method. To dual boot Linux and Windows, you need to partition your hard drive to create separate spaces for both the Linux and Windows OS. The performance speed between WSL, virtual machines, and bare metal Linux has become so close that few developers choose this method due to the overhead of needing to restart (reboot) your device any time you want to switch between the operating systems. If you choose the bare metal Linux install route, you may also need to deal with potential driver issues or hardware compatibility problems that may arise with Linux on some devices.
+
+You can find a list of [Popular Linux Distributions available for download on Linux.org](https://linux.org/pages/download/). Once you've chosen a distro, follow the instructions to [Create a bootable USB to install bare-metal Linux](#create-a-bootable-usb-to-install-bare-metal-linux).
+
+![Create a bootable USB screenshot](./images/usb-setup-screenshot.png)
 
 ## How to choose a Linux distribution
 
@@ -50,6 +68,8 @@ Security needs: Some Linux users may have specific security concerns to consider
 
 **Community support**: A large user community that  consistently contributes to the distribution, fixing bugs, adding features, helping with questions, etc. is another good consideration. OpenSUSE has been around longer than most other distributions and still receives active updates.
 
+![Screenshot of the list of distributions on Linux.org](./images/linux-distributions-list-screenshot.png)
+
 ## Install Linux with Windows Subsystem for Linux
 
 To install Linux on a Windows PC, use the install Linux command.
@@ -58,7 +78,7 @@ To install Linux on a Windows PC, use the install Linux command.
 2. Enter the Linux install command: `wsl --install`.
 3. Restart your machine.
 
-![WSL Linux Install Command screenshot](./images/wsl-install-screenshot.png)
+![WSL Linux Install List Command screenshot](./images/wsl-install-list-screenshot.png)
 
 ### Install Linux command options
 
@@ -87,7 +107,7 @@ Azure supports a variety of options for setting up Linux VMs in the cloud. For a
 
 If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin. If you're new to creating Linux VMs with Azure, you can [learn more about VMs](https://azure.microsoft.com/resources/cloud-computing-dictionary/what-is-a-virtual-machine) or check out the online training course: [Create a Linux virtual machine in Azure](/training/modules/create-linux-virtual-machine-in-azure/).
 
-![Create a Linux VM on Azure screenshot](./images/create-linux-vm-on-azure.png)
+![Select Linux VM size on Azure screenshot](./images/create-linux-vm-on-azure-size.png)
 
 ## Create a Linux Virtual Machine locally using a hypervisor
 
@@ -116,8 +136,6 @@ If you want bare-metal Linux, whether to run a distribution alone on a device or
 4. Select install options.
     Typically the installer for your Linux distribution will include a set of installation steps that will involve choosing options about whether you want to include certain features, third-party software packages, etc. You may also need to specify whether to erase the disk in the case that this Linux distro will be the only operating system, or to use a partition, if you plan to run multiple operating systems. You may also be asked about whether you'd like to enable encryption.
 5. Finally, as with any Linux installation, you will be asked to create a user name and password.
-
-![Create a bootable USB screenshot](./images/usb-setup-screenshot.png)
 
 ![Ubuntu install screenshot](./images/ubuntu-install-screenshot.png)
 
