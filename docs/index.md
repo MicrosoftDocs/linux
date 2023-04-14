@@ -119,14 +119,6 @@ A variety of Linux-related training is available from Microsoft, ranging from Be
         A training module on how to create a Linux virtual machine using the Azure portal.
     :::column-end:::
 :::row-end:::
-:::row:::
-    :::column:::
-        [:::image type="icon" source="images/#g":::](/windows/dev-environment/javascript/vue-on-wsl)
-
-        [**Install Vue.js on Linux with WSL**](/windows/dev-environment/javascript/vue-on-wsl)<br>
-        Vue is an open-source, front end JavaScript framework for building user interfaces and single-page applications on the web. Learn how to install Vue.js, the Vue CLI, and the Node.js dependencies using WSL. 
-    :::column-end:::
-:::row-end:::
 
 ## Microsoft + Linux news, events, and partnerships
 
