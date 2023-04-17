@@ -29,9 +29,9 @@ Microsoft supports Linux with a variety of different tools and services. If youâ
         Learn how to how to install .NET on various Linux distributions either manually, via a package manager, or via a container. .NET is a free and open-source development platform with languages, editors, and libraries to build for web, mobile, desktop, games, and IoT.
     :::column-end:::
     :::column:::
-        [:::image type="icon" source="images/vscode.png":::](https://code.visualstudio.com/download)
+        [:::image type="icon" source="images/vscode-white.png":::](https://code.visualstudio.com/download)
         [**Install Visual Studio Code on Linux**](https://code.visualstudio.com/download)<br>
-        VS Code is a lightweight source code editor with built-in support for JavaScript, TypeScript, Node.js, a rich ecosystem of extensions (C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity). [Learn how to install it on Linux and keep it up to date via package managers.](https://code.visualstudio.com/docs/setup/linux) 
+        VS Code is a lightweight source code editor with built-in support for JavaScript, TypeScript, Node.js, a rich ecosystem of extensions (C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity). [Learn how to install it on Linux and keep it up to date via package managers.](https://code.visualstudio.com/docs/setup/linux)
     :::column-end:::
     :::column:::
         [:::image type="icon" source="images/powershell.png":::](/powershell/scripting/install/installing-powershell-on-linux)
@@ -42,6 +42,39 @@ Microsoft supports Linux with a variety of different tools and services. If youâ
         [:::image type="icon" source="images/mariner.png":::](/dotnet/core/install/linux)
         [**CBL-Mariner**](https://github.com/microsoft/CBL-Mariner)<br>
         Mariner is an open-source Linux distribution created by Microsoft. Mariner is now available for preview as a boot-able Linux image that can be used as a container host on Azure Kubernetes Service (AKS). [Learn more about Mariner](/azure/aks/use-mariner).
+    :::column-end:::
+:::row-end:::
+
+### Install .NET on Linux
+
+:::row:::
+    :::column:::
+        [![.NET on Linux](../images/vscode.png)](https://code.visualstudio.com/download)
+    :::column-end:::
+    :::column span="2":::
+        Learn how to how to install .NET on various Linux distributions either manually, via a package manager, or via a container. .NET is a free and open-source development platform with languages, editors, and libraries to build for web, mobile, desktop, games, and IoT.
+    :::column-end:::
+:::row-end:::
+
+### Install Visual Studio Code on Linux
+
+:::row:::
+    :::column:::
+        [![VS Code on Linux](../images/vscode.png)](/dotnet/core/install/linux)
+    :::column-end:::
+    :::column span="2":::
+        VS Code is a lightweight source code editor with built-in support for JavaScript, TypeScript, Node.js, a rich ecosystem of extensions (C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity). [Learn how to install it on Linux and keep it up to date via package managers.](https://code.visualstudio.com/docs/setup/linux)
+    :::column-end:::
+:::row-end:::
+
+### Install PowerShell on Linux
+
+:::row:::
+    :::column:::
+        [![PowerShell on Linux](../images/powershell-linux.png)](/powershell/scripting/install/installing-powershell-on-linux)
+    :::column-end:::
+    :::column span="2":::
+        PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management program. Learn how to install PowerShell on Linux and find the currently supported Linux distributions and package managers.
     :::column-end:::
 :::row-end:::
 
