@@ -31,7 +31,7 @@ Microsoft supports Linux with a variety of different tools and services. If you�
     :::column:::
         [:::image type="icon" source="images/vscode.png":::](https://code.visualstudio.com/download)
         [**Install Visual Studio Code on Linux**](https://code.visualstudio.com/download)<br>
-        VS Code is a lightweight source code editor with built-in support for JavaScript, TypeScript, Node.js, a rich ecosystem of extensions (C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity). [Learn how to install it on Linux and keep it up to date via package managers.](https://code.visualstudio.com/docs/setup/linux)
+        VS Code is a lightweight source code editor with a rich ecosystem of extensions (C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity). Learn how to [install Visual Studio Code on Linux](https://code.visualstudio.com/docs/setup/linux) and keep it up to date via package managers. You can also learn [Remote development with Linux](https://code.visualstudio.com/docs/remote/linux) using VS Code and the [WSL extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) that lets you use VS Code on Windows to build Linux applications.
     :::column-end:::
     :::column:::
         [:::image type="icon" source="images/powershell.png":::](/powershell/scripting/install/installing-powershell-on-linux)
@@ -59,13 +59,19 @@ Microsoft supports Linux with a variety of different tools and services. If you�
 
 ## New to Linux?
 
-If you're new to Linux, we can help you to get started. Linux is an open source operating system with many different versions due to the nature of being open source and fully customizable. The different versions of Linux are called "distributions" (sometimes shortened to “distros”). You will first need to decide on a Linux distro that you want to run. You will next need to decide the install method you prefer - running Linux integrated with Windows (using Windows Subsystem for Linux), running Linux on a Virtual Machine (either locally with a hypervisor or in the cloud with Azure), or running bare-metal Linux (using a bootable USB and dual-booting if you need to run another system).
+If you're new to Linux, we can help you to get started. Linux is an open source operating system with many different versions due to the nature of being open source and fully customizable. The different versions of Linux are called "distributions" (sometimes shortened to “distros”). Check out our guide on [How to download and install Linux](install.md) that covers how to:
 
-For step-by-step guidance on how to get started, see [How to download and install Linux](./install.md).
+- [Choose a Linux distribution](install.md#step-2---choose-a-linux-distribution)
+- [Use the install Linux command with Windows Subsystem for Linux (WSL)](install.md#install-linux-with-windows-subsystem-for-linux)
+- [Create a Linux Virtual Machine (VM) in the cloud](install.md#create-a-linux-virtual-machine-in-the-cloud)
+- [Create a Linux Virtual Machine (VM) on your local machine](install.md#create-a-linux-virtual-machine-locally-using-a-hypervisor)
+- [Create a bootable USB to install bare-metal Linux](install.md#create-a-bootable-usb-drive-to-install-bare-metal-linux)
+
+If you want to learn more before you install Linux, check out some of our Linux-related training available at Microsoft.
 
 ## Linux-related training at Microsoft
 
-A variety of Linux-related training is available from Microsoft, ranging from Beginner to Advanced levels of expertise.
+A variety of Linux-related training is available, ranging from Beginner to Advanced levels of expertise.
 
 :::row:::
     :::column:::
