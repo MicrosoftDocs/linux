@@ -38,47 +38,22 @@ Microsoft supports Linux with a variety of different tools and services. If youâ
         [**Install PowerShell on Linux**](/powershell/scripting/install/installing-powershell-on-linux)<br>
         PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management program. Learn how to install PowerShell on Linux and find the currently supported Linux distributions and package managers.
     :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [:::image type="icon" source="images/microsoftedge.png":::](https://www.microsoftedgeinsider.com/download?platform=linux-deb)
+        [**Install Microsoft Edge on Linux**](https://www.microsoftedgeinsider.com/download?platform=linux-deb)<br>
+        Microsoft Edge, built on the same technology as Chrome, now offers the Bing AI-powered copilot, in addition to Startup boost, Efficiency mode, Microsoft Defender SmartScreen, Password monitor, Collections, Vertical or Sleeping Tabs, [and more](https://www.microsoft.com/edge/features). You can [install a Beta or Dev Channel version of Microsoft Edge on Linux](https://www.microsoftedgeinsider.com/download?platform=linux-deb) via download or using the command line.
+    :::column-end:::
+    :::column:::
+        [:::image type="icon" source="images/microsoft-defender-linux.png":::](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux)
+        [**Install Microsoft Defender for Endpoint on Linux**](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux)<br>
+        Get a unified view of threats and alerts for your environment in the Microsoft 365 Defender portal empowering you to more quickly assess and respond to these threats. Learn how to [install, configure, update, and use Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux).
+    :::column-end:::
     :::column:::
         [:::image type="icon" source="images/mariner.png":::](/dotnet/core/install/linux)
-        [**CBL-Mariner**](https://github.com/microsoft/CBL-Mariner)<br>
+        [**CBL-Mariner Linux distribution**](https://github.com/microsoft/CBL-Mariner)<br>
         Mariner is an open-source Linux distribution created by Microsoft. Mariner is now available for preview as a boot-able Linux image that can be used as a container host on Azure Kubernetes Service (AKS). [Learn more about Mariner](/azure/aks/use-mariner).
-    :::column-end:::
-:::row-end:::
-
-## Microsoft tools that run on Linux
-
-Microsoft supports Linux with a variety of different tools and services. If youâ€™re using Linux you may be interested in some of these resources.
-
-### Install .NET on Linux
-
-:::row:::
-    :::column:::
-        [![.NET on Linux](images/net.png)](https://code.visualstudio.com/download)
-    :::column-end:::
-    :::column span="2":::
-        Learn how to how to install .NET on various Linux distributions either manually, via a package manager, or via a container. .NET is a free and open-source development platform with languages, editors, and libraries to build for web, mobile, desktop, games, and IoT.
-    :::column-end:::
-:::row-end:::
-
-### Install Visual Studio Code on Linux
-
-:::row:::
-    :::column:::
-        [![VS Code on Linux](images/vscode-white.png)](/dotnet/core/install/linux)
-    :::column-end:::
-    :::column span="2":::
-        VS Code is a lightweight source code editor with built-in support for JavaScript, TypeScript, Node.js, a rich ecosystem of extensions (C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity). [Learn how to install it on Linux and keep it up to date via package managers.](https://code.visualstudio.com/docs/setup/linux)
-    :::column-end:::
-:::row-end:::
-
-### Install PowerShell on Linux
-
-:::row:::
-    :::column:::
-        [![PowerShell on Linux](images/powershell-linux.png)](/powershell/scripting/install/installing-powershell-on-linux)
-    :::column-end:::
-    :::column span="2":::
-        PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management program. Learn how to install PowerShell on Linux and find the currently supported Linux distributions and package managers.
     :::column-end:::
 :::row-end:::
 
