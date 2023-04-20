@@ -3,6 +3,8 @@
   items:
   - name: Install Linux
     href: ./install.md
+  - name: Use PMC for installing MS packages on Linux
+    href: ./packages.md
   - name: Windows Subsystem for Linux
     href: /windows/wsl
   - name: Linux VMs in Azure
