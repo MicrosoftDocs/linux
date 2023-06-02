@@ -11,24 +11,47 @@ ms.date: 04/20/2023
 
 # Linux Software Repository for Microsoft Products
 
-Microsoft products can be packaged for installation on Linux distributions using the [packages.microsoft.com](https://packages.microsoft.com) (PMC) service.
+Microsoft builds and supports a variety of software products for Linux systems and makes them available via Linux packaging clients (apt, dnf, yum, etc) hosted on the PMC (https://packages.microsoft.com) service.
 
-Products supported in the PMC service currently include:
+This guide outlines the configuration steps for adding a repository on your Linux system, so that you can then install and upgrade Microsoft Linux software using your distribution's standard package management tools.
 
-- [.NET on Linux]()
-- [Microsoft Defender for Endpoint on Linux]()
-- [TBD]()
-- [TBD]()
-- [TBD]()
+## Example Microsoft software supported on Linux by PMC
 
-This document describes how to configure the repository on your Linux system, so that you can then install/upgrade Microsoft's Linux software using your distribution's standard package management tools.
+A few of the Microsoft products with Linux versions supported for install using the PMC service include:
+
+- [.NET on Linux](/dotnet/core/install/linux)
+- [PowerShell on Linux](/powershell/scripting/install/installing-powershell-on-linux)
+- [Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux) ([Manual deployment guide](/microsoft-365/security/defender-endpoint/linux-install-manually))
+- [SQL Server on Linux](/sql/linux/sql-server-linux-overview) ([Offline install guidance](/sql/linux/sql-server-linux-setup#offline))
+- [Microsoft InTune for Linux](/mem/intune/user-help/microsoft-intune-app-linux)
 
 > [!NOTE]
 > Packages in the Linux software repositories are subject to the license terms located in the packages. Please read the license terms prior to using the package. Your installation and use of the package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use the package.
 
-## How to use PMC
+## Adding repositories
 
-Need some basic instructions and/or common scenarios for how someone may use PMC to install Microsoft products on their Linux system. This would cover a more basic, high-level view of how the service is used, what to expect, what distributions are supported, what to do if there is a product or distribution that you are using that isn't supported, as well as a statement about how detailed instructions for installing a Microsoft product on a Linux system may vary and to see the links above or the docs for that particular product.
+Repositories can be configured automatically by installing the Linux package that applies to your Linux distribution and version. The package will install the repository configuration, along with the GPG public key used by tools such as apt, yum, or zypper to validate the signed packages and/or repository metadata.
+
+## Manual configuration
+
+Repository configuration files are available from [https://packages.microsoft.com/config](https://packages.microsoft.com/config). The name and location of these files can be located using the following URI naming convention:
+`https://packages.microsoft.com/config/<Distribution>/<Version>/prod.(repo|list)`
+
+## Package and Repository Signing Key
+
+- Microsoft's GPG public key may be downloaded here: [https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
+- Public Key ID: Microsoft (Release signing) `gpgsecurity@microsoft.com`
+- Public Key Fingerprint: `BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
+
+## Example of using PMC
+
+- Install a repository configuration: `curl -sSL https://packages.microsoft.com/config/<distribution>/<version>/prod.list | sudo tee /etc/apt/sources.list.d/microsoft-prod.list` (replacing `<distribution>` and `<version>` with the name of the supported Linux distribution and version you wish to use).
+
+- Install Microsoft GPG public key: `curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc`
+
+- Update package index files: `sudo <apt-get> update` (replacing `<apt-get>` with the appropriate command for the package manager used with your Linux distribution).
+
+See [packages.microsoft.com](https://packages.microsoft.com/) find the list of supported Linux distributions and versions.
 
 ## How to file an issue, request a feature, or report a security vulnerability
 
@@ -58,22 +81,3 @@ Repositories can be configured automatically by installing the Linux package tha
 Note that not all supported distributions are listed here. See the current supported package repositories at https://packages.microsoft.com/ and the instructions for manual configuration below.
 
 TO-DO: This intro should be updated. It's currently a bit confusing... is the purpose of this section to share the distro-specific code for each of the distro package managers that is supported? I'm going to hold off on copy-pasting anything from https://learn.microsoft.com/windows-server/administration/linux-package-repository-for-microsoft-software until there is more clarity on the modern story and what's supported.
-
-### Debian
-
-Do we need to maintain the current version # or name of each supported distro and the code for adding PMC with the associated package manager? How many distros are supported?
-
-## Manual configuration
-
-The repository configuration files are available from packages.microsoft.com/config. The name and location of these files can be located using the following URI naming convention:
-
-`https://packages.microsoft.com/config/<Distribution>/<Version>/prod.(repo|list)`
-
-### Package and Repository Signing Key
-
-- Microsoft's GPG public key may be downloaded here: https://packages.microsoft.com/keys/microsoft.asc
-- Public Key ID: Microsoft (Release signing) gpgsecurity@microsoft.com
-- Public Key Fingerprint: BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF
-
-TO-DO: Is this all still relevant? If so, would be helpful to have more context around what it means to manually configure and more of a step-by-step walkthrough.
-
