@@ -11,13 +11,13 @@ ms.date: 04/20/2023
 
 # Linux Software Repository for Microsoft Products
 
-Microsoft builds and supports a variety of software products for Linux systems and makes them available via Linux packaging clients (apt, dnf, yum, etc) hosted on the PMC (https://packages.microsoft.com) service.
+Microsoft builds and supports a variety of software products for Linux systems and makes them available via Linux packaging clients (apt, dnf, yum, etc) hosted on the Linux software repository for Microsoft products (https://packages.microsoft.com) service.
 
 This guide outlines the configuration steps for adding a repository on your Linux system, so that you can then install and upgrade Microsoft Linux software using your distribution's standard package management tools.
 
-## Example Microsoft software supported on Linux by PMC
+## How to install Microsoft software using the Linux Packages Repository
 
-A few of the Microsoft products with Linux versions supported for install using the PMC service include:
+Each Microsoft product may require a slightly different installation process. See the associated product documentation for installing on Linux. A few of the Microsoft products with Linux versions supported for install using the Linux Packages Repository (package.microsoft.com) service include:
 
 - [.NET on Linux](/dotnet/core/install/linux)
 - [PowerShell on Linux](/powershell/scripting/install/installing-powershell-on-linux)
