@@ -45,11 +45,17 @@ Repository configuration files are available from [https://packages.microsoft.co
 
 ## Example of using PMC
 
-- Install a repository configuration: `curl -sSL https://packages.microsoft.com/config/<distribution>/<version>/prod.list | sudo tee /etc/apt/sources.list.d/microsoft-prod.list` (replacing `<distribution>` and `<version>` with the name of the supported Linux distribution and version you wish to use).
+- Install a repository configuration: `curl -sSL https://packages.microsoft.com/config/<distribution>/<version>/prod.list | sudo tee /etc/apt/sources.list.d/microsoft-prod.list` (replacing `<distribution>` and `<version>` with the name of the supported Linux distribution and version you wish to use). If you're unsure what distribution and version you are currently running, you can try entering `lsb_release -a` (for any distro that includes the “lsb-release" package) or `cat /etc/os-release` (for any distro that uses systemd).
 
-- Install Microsoft GPG public key: `curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc`
+- Download the Microsoft repository GPG public key: `curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc`
+
+- Register the Microsoft repository GPG public key: `sudo dpkg -i packages-microsoft-prod.deb`
+
+- Delete the the Microsoft repository GPG public keys file after registering: `rm packages-microsoft-prod.deb`
 
 - Update package index files: `sudo <apt-get> update` (replacing `<apt-get>` with the appropriate command for the package manager used with your Linux distribution).
+
+- To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com): `sudo <apt-get> install <product-name>` (replacing `<apt-get>` with the appropriate command for the package manager used with your Linux distribution and `<product-name>` with the name of the Microsoft software that you want to install). 
 
 See [packages.microsoft.com](https://packages.microsoft.com/) find the list of supported Linux distributions and versions.
 
