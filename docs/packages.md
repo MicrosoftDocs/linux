@@ -11,13 +11,13 @@ ms.date: 04/20/2023
 
 # Linux Software Repository for Microsoft Products
 
-Microsoft builds and supports a variety of software products for Linux systems and makes them available via Linux packaging clients (apt, dnf, yum, etc) hosted on the Linux software repository for Microsoft products (https://packages.microsoft.com) service.
+Microsoft builds and supports a variety of software products for Linux systems and makes them available via Linux packaging clients (apt, dnf, yum, etc) hosted on the Linux software repository for Microsoft products (https://packages.microsoft.com).
 
-This guide outlines the configuration steps for adding a repository on your Linux system, so that you can then install and upgrade Microsoft Linux software using your distribution's standard package management tools.
+This guide outlines the configuration steps for downloading the Linux software repository for Microsoft products (https://packages.microsoft.com) to your Linux system, so that you can then install and upgrade Microsoft software that is built for Linux using your distribution's standard package management tools.
 
-## How to install Microsoft software using the Linux Packages Repository
+## How to install Microsoft software packages using the Linux Repository
 
-Each Microsoft product may require a slightly different installation process. See the associated product documentation for installing on Linux. A few of the Microsoft products with Linux versions supported for install using the Linux Packages Repository (package.microsoft.com) service include:
+Each Microsoft product may require a slightly different installation process. See the associated Microsoft product documentation for installing on Linux. A few of the Microsoft products with Linux versions supported for install using the Linux Repository (package.microsoft.com) include:
 
 - [.NET on Linux](/dotnet/core/install/linux)
 - [PowerShell on Linux](/powershell/scripting/install/installing-powershell-on-linux)
@@ -26,18 +26,18 @@ Each Microsoft product may require a slightly different installation process. Se
 - [Microsoft InTune for Linux](/mem/intune/user-help/microsoft-intune-app-linux)
 
 > [!NOTE]
-> Packages in the Linux software repositories are subject to the license terms located in the packages. Please read the license terms prior to using the package. Your installation and use of the package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use the package.
+> Packages in the Linux Software Repository are subject to the license terms located in each package. Please read the license terms prior to using the package. Your installation and use of the package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use the package.
 
-## Adding repositories
+## Using the Linux Software Repository for Microsoft Products
 
-Repositories can be configured automatically by installing the Linux package that applies to your Linux distribution and version. The package will install the repository configuration, along with the GPG public key used by tools such as apt, yum, or zypper to validate the signed packages and/or repository metadata.
+This Linux Software Repository will be configured automatically by installing the Linux package that applies to your Linux distribution and version. The package will install the repository configuration, along with the GPG public key used by tools such as apt, yum, or zypper to validate the signed packages and/or repository metadata.
 
-## Manual configuration
-
-Repository configuration files are available from [https://packages.microsoft.com/config](https://packages.microsoft.com/config). The name and location of these files can be located using the following URI naming convention:
+Optionally, if you prefer manual configuration, the Linux Software Repository configuration files are available at [https://packages.microsoft.com/config](https://packages.microsoft.com/config). The name and location of these files can be located using the following URI naming convention:
 `https://packages.microsoft.com/config/<Distribution>/<Version>/prod.(repo|list)`
 
 ## Package and Repository Signing Key
+
+Linux Software Repository for Microsoft Products uses the GPG (GNU Privacy Guard) tool to secure apt to sign files and check their signatures in order to authenticate downloaded packages.
 
 - Microsoft's GPG public key may be downloaded here: [https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
 - Public Key ID: Microsoft (Release signing) `gpgsecurity@microsoft.com`
@@ -59,6 +59,10 @@ Repository configuration files are available from [https://packages.microsoft.co
 
 See [packages.microsoft.com](https://packages.microsoft.com/) find the list of supported Linux distributions and versions.
 
+## License terms
+
+Packages in the Linux software repositories are subject to the license terms located in the packages. Please read the license terms prior to using the package. Your installation and use of the package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use the package.
+
 ## How to file an issue, request a feature, or report a security vulnerability
 
 We want to ensure that our Linux customers are well-supported. The following communication channels are available to users of the PMC service:
@@ -68,22 +72,3 @@ We want to ensure that our Linux customers are well-supported. The following com
 - [Request a feature](https://github.com/microsoft/linux-package-repositories/issues/new?assignees=&labels=enhancement&template=request-a-feature.md): Request a new feature or enhancement to the PMC service.
 
 - [Report a security vulnerability](https://github.com/microsoft/linux-package-repositories/security/policy): Help us to identify any potential security vulnerabilities by reviewing our security policy and reporting any issues.
-
-## Production and MsSQL server repositories
-
-- **prods** - Production repositories (e.g. Ubuntu, Fedora, RHEL, etc.) are designated for packages intended to be used in production. These packages are commercially supported by Microsoft under the terms of the applicable support agreement or program that you have with Microsoft. The prod repositories can be located via hierarchical folder structure (e.g. https://packages.microsoft.com/fedora/36/prod/).
-- **mssql-server** -  These repositories contain packages for Microsoft SQL Server on Linux - See also: SQL Server on Linux.
-
-TO-DO: I don't understand this section or why these two categories of separation in the repository exists or are important to call out. Is this still relevant? If so, can we offer more context?
-
-## License terms
-
-Packages in the Linux software repositories are subject to the license terms located in the packages. Please read the license terms prior to using the package. Your installation and use of the package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use the package.
-
-## Distribution-specific configuration guidance
-
-Repositories can be configured automatically by installing the Linux package that applies to your Linux distribution and version. The package will install the repository configuration, along with the GPG public key used by tools such as apt, yum, or zypper to validate the signed packages and/or repository metadata.
-
-Note that not all supported distributions are listed here. See the current supported package repositories at https://packages.microsoft.com/ and the instructions for manual configuration below.
-
-TO-DO: This intro should be updated. It's currently a bit confusing... is the purpose of this section to share the distro-specific code for each of the distro package managers that is supported? I'm going to hold off on copy-pasting anything from https://learn.microsoft.com/windows-server/administration/linux-package-repository-for-microsoft-software until there is more clarity on the modern story and what's supported.
