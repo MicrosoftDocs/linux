@@ -6,7 +6,7 @@ ms.author: mattwoj
 manager: jken
 ms.topic: article
 ms.technology: linux-resources
-ms.date: 03/28/2023
+ms.date: 07/06/2023
 ---
 
 # Linux resources at Microsoft

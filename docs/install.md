@@ -6,7 +6,7 @@ ms.author: mattwoj
 manager: jken
 ms.topic: article
 ms.technology: linux-resources
-ms.date: 03/28/2023
+ms.date: 07/06/2023
 ---
 
 # How to download and install Linux
@@ -41,7 +41,7 @@ Learn more about these options below.
 
 This is the most simple install method. Just run the Linux install command: `wsl --install` to install the Ubuntu distribution.
 
-This method uses virtualization to integrate the Windows operating system (OS) with the Linux OS (running on an actual Linux kernel). You can add as many different Linux distributions as you please and run your favorite Linux tools, including GUI apps, alongside your favorite Windows tools. You can also mix and match Bash and PowerShell commands in the same command line. A Linux file system hosts your project files, while a separate Windows file systems hosts any developer tools, such as VS Code, that you'd like to work on the files with. This method of running Linux is highly efficient and performant. Once you choose a Linux distribution or opt to use the default Ubuntu distro, follow the instructions to [Use the install Linux command with Windows Subsystem for Linux](#use-the-install-linux-command-with-windows-subsystem-for-linux) or learn more in the [WSL documentation](/windows/wsl).
+This method uses virtualization to integrate the Windows operating system (OS) with the Linux OS (running on an actual Linux kernel). You can add as many different Linux distributions as you please and run your favorite Linux tools, including GUI apps, alongside your favorite Windows tools. You can also mix and match Bash and PowerShell commands in the same command line. A Linux file system hosts your project files, while a separate Windows file systems hosts any developer tools, such as VS Code, that you'd like to work on the files with. This method of running Linux is highly efficient and performant. Once you choose a Linux distribution or opt to use the default Ubuntu distro, follow the instructions to [Use the install Linux command with Windows Subsystem for Linux](#install-linux-with-windows-subsystem-for-linux) or learn more in the [WSL documentation](/windows/wsl).
 
 ![WSL install command screenshot](./images/wsl-install-command-screenshot.png)
 
@@ -55,7 +55,7 @@ Creating a VM on Azure means that it's hosted in the cloud, on Microsoft's serve
 
 Creating a VM on your local machine requires virtualization using a hypervisor. Windows includes a "type 1" hypervisor called [Hyper-V](/virtualization/hyper-v-on-windows/) to run virtualization directly on your device hardware.There are also "type 2" hypervisors that run on top of the operating system, like VirtualBox or VMware. You are responsible for managing the virtual machine, including allocating resources like memory and disk space, and ensuring that it is secure and up-to-date. This requires more technical expertise than some of the other options and may not be as scalable or fault-tolerant.
 
-Once you've chosen a distribution and decided whether you want to run the VM locally, using a hypervisor, or in the cloud, using Azure, follow the instructions to [Create a Linux Virtual Machine](#create-a-linux-virtual-machine).
+Once you've chosen a distribution and decided whether you want to run the VM locally, using a hypervisor, or in the cloud, using Azure, follow the instructions to [Create a Linux Virtual Machine in the Cloud](#create-a-linux-virtual-machine-in-the-cloud) or [Create a Linux Virtual Machine locally using a Hypervisor](#create-a-linux-virtual-machine-locally-using-a-hypervisor)
 
 ![Create a Linux VM on Azure screenshot](./images/create-linux-vm-on-azure.png)
 
@@ -65,7 +65,7 @@ Bare metal Linux just means that Linux is running directly on the device hardwar
 
 Many users choose the traditional method of installing bare metal Linux on a device that is also running Windows and using the **"dual boot"** method. To dual boot Linux and Windows, you need to partition your hard drive to create separate spaces for both the Linux and Windows OS. The performance speed between WSL, virtual machines, and bare metal Linux has become so close that few developers choose this method due to the overhead of needing to restart (reboot) your device any time you want to switch between the operating systems. If you choose the bare metal Linux install route, you may also need to deal with potential driver issues or hardware compatibility problems that may arise with Linux on some devices.
 
-You can find a list of [Popular Linux Distributions available for download on Linux.org](https://linux.org/pages/download/). Once you've chosen a distro, follow the instructions to [Create a bootable USB to install bare-metal Linux](#create-a-bootable-usb-to-install-bare-metal-linux).
+You can find a list of [Popular Linux Distributions available for download on Linux.org](https://linux.org/pages/download/). Once you've chosen a distro, follow the instructions to [Create a bootable USB to install bare-metal Linux](#create-a-bootable-usb-drive-to-install-bare-metal-linux).
 
 ![Create a bootable USB screenshot](./images/usb-setup-screenshot.png)
 
