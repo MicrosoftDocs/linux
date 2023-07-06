@@ -47,13 +47,9 @@
       "feedback_product_url": "MicrosoftDocs/linux"
     },
     "fileMetadata": {
-      "ms.prod":
+      "ms.service":
       {
-        "**/*.md": "dev-environment"
-      },
-      "ms.technology":
-      {
-        "**/*.md": "wsl"
+        "**/*.md": "linux-resources"
       }
     },
     "template": [],

@@ -5,7 +5,6 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.technology: linux-resources
 ms.date: 07/06/2023
 ---
 
