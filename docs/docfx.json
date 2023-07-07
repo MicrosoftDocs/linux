@@ -42,10 +42,17 @@
     "globalMetadata": {
       "breadcrumb_path": "/linux/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/linux",
+      "feedback_product_url": "MicrosoftDocs/linux"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.service":
+      {
+        "**/*.md": "linux-resources"
+      }
+    },
     "template": [],
-    "dest": "linux-resources"
+    "dest": "docs"
   }
 }
