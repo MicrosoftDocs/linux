@@ -137,9 +137,9 @@ A variety of Linux-related training is available, ranging from Beginner to Advan
     :::column-end:::
 :::row-end:::
 
-## Cloud Solution Architectre for Linux
+## Cloud Solution Architecture for Linux
 
-TBD description.
+As your Linux workloads become more complex, you may consider building new or migrating existing systems to the cloud in order to increase scale, improve security, or take advantage for management tools and networking services. Learn more about how Azure supports Cloud Solution Architecture for Linux.
 
 :::row:::
     :::column:::
