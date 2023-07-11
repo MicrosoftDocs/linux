@@ -55,6 +55,23 @@ Microsoft supports Linux with a variety of different tools and services. If youâ
         Mariner is an open-source Linux distribution created by Microsoft. Mariner is now available for preview as a boot-able Linux image that can be used as a container host on Azure Kubernetes Service (AKS). [Learn more about Mariner](/azure/aks/use-mariner).
     :::column-end:::
 :::row-end:::
+:::row:::
+    :::column:::
+        [:::image type="icon" source="images/azure-cli.png":::](/cli/azure/install-azure-cli-linux)
+        [**Install the Azure CLI on Linux**](/cli/azure/install-azure-cli-linux)<br>
+        The Azure Command-Line Interface (CLI) is a cross-platform command-line tool to connect to Azure and execute administrative commands on Azure resources. It allows the execution of commands through a terminal using interactive command-line prompts or a script. [Azure CLI list of commands](/cli/azure/reference-index).
+    :::column-end:::
+    :::column:::
+        [:::image type="icon" source="images/azure-powershell.png":::](/powershell/azure/install-azps-linux)
+        [**Install Azure PowerShell on Linux**](/powershell/azure/install-azps-linux)<br>
+        The Azure PowerShell Az module is a rollup module. Installing it downloads the generally available Az PowerShell modules and makes their cmdlets available for use.
+    :::column-end:::
+    :::column:::
+        [:::image type="icon" source="images/azure-data-studio.png":::](/sql/azure-data-studio/download-azure-data-studio#linux-installation)
+        [**Download and install Azure Data Studio on Linux**](/sql/azure-data-studio/download-azure-data-studio#linux-installation)<br>
+        Use Azure Data Studio to query, design, and manage your databases and data warehouses wherever they are, on your local computer or in the cloud. You can install Azure Data Studio on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), Ubuntu, Debian, and Windows Subsystem for Linux (WSL).
+    :::column-end:::
+:::row-end:::
 
 ## New to Linux?
 
@@ -134,6 +151,26 @@ A variety of Linux-related training is available, ranging from Beginner to Advan
 
         [**Create a Linux virtual machine in Azure**](/training/modules/create-linux-virtual-machine-in-azure/)<br>
         A training module on how to create a Linux virtual machine using the Azure portal.
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [:::image type="icon" source="images/training-azure-cli.png":::](/training/modules/azure-command-line-tools-intro/)
+
+        [**Choose the best Azure command-line tools for managing and provisioning your cloud infrastructure**](/training/modules/azure-command-line-tools-intro/)<br>
+        Learn the basic concepts of infrastructure as code, explore the key differences between the Azure CLI, Azure PowerShell, Bicep, and Terraform, and decide which command-line tools best meet your organization's needs.
+    :::column-end:::
+    :::column:::
+        [:::image type="icon" source="images/":::](/cli/azure/azure-cli-learn-bash)
+
+        [**Learn to use Bash with the Azure CLI**](/cli/azure/azure-cli-learn-bash)<br>
+        A tutorial on how to use the Azure CLI in a Bash environment, write queries, format output, create objects using variables and randomization, create a storage account, handle errors, clean up resources, and more.
+    :::column-end:::
+    :::column:::
+        [:::image type="icon" source="images/":::](/training/)
+
+        [**title**]()<br>
+        A .
     :::column-end:::
 :::row-end:::
 
