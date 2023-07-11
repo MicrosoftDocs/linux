@@ -137,6 +137,51 @@ A variety of Linux-related training is available, ranging from Beginner to Advan
     :::column-end:::
 :::row-end:::
 
+## Cloud Solution Architectre for Linux
+
+TBD description.
+
+:::row:::
+    :::column:::
+        [:::image type="icon" source="images/linux-architecture-azure-single-vm-diagram.png":::](/azure/architecture/browse/?terms=linux)
+
+        [**Browse Azure Architectures**](/azure/architecture/browse/?terms=linux)<br>
+        Find architecture diagrams and technology descriptions for reference architectures, real world examples of cloud architectures, and solution ideas for common Linux workloads on Azure.
+    :::column-end:::
+    :::column:::
+        [:::image type="icon" source="images/linux-architecture-azure-single-vm-diagram.png":::](/azure/architecture/reference-architectures/containers/aks/baseline-aks)
+
+        [**Baseline architecture for an Azure Kubernetes Service (AKS) cluster**](/azure/architecture/reference-architectures/containers/aks/baseline-aks)<br>
+        Learn about the recommended baseline infrastructure architecture to deploy an Azure Kubernetes Service (AKS) cluster on Azure and best practices from the Azure Well-Architected Framework for deploying a networking, security, or identity infrastructure.
+    :::column-end:::
+    :::column:::
+        [:::image type="icon" source="images/linux-migration-to-azure.png":::](/azure/cloud-adoption-framework/scenarios/)
+
+        [**The One Migrate approach - Cloud Adoption**](/azure/cloud-adoption-framework/scenarios/)<br>
+        Learn about the process for migrating your core Linux applications and databases from on-premisis servers to the cloud in order to take advantage of Azure services that can simplify operations, optimize CI/CD processes, use auto-scaling, and reduce costs. 
+    :::column-end:::
+:::row-end:::
+<!-- :::row:::
+    :::column:::
+        [:::image type="icon" source="images/":::]()
+
+        [**TItle**]()<br>
+        Read about.
+    :::column-end:::
+    :::column:::
+        [:::image type="icon" source="images/":::]()
+
+        [**TItle**]()<br>
+        Read about.
+    :::column-end:::
+    :::column:::
+        [:::image type="icon" source="images/":::]()
+
+        [**TItle**]()<br>
+        Read about.
+    :::column-end:::
+:::row-end::: -->
+
 ## Microsoft + Linux news, events, and partnerships
 
 Microsoft is one of the biggest contributors to open source projects in the world. Learn more about Microsoft + Linux partnerships, Open Source news, events, and history.
