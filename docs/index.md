@@ -161,16 +161,16 @@ A variety of Linux-related training is available, ranging from Beginner to Advan
         Learn the basic concepts of infrastructure as code, explore the key differences between the Azure CLI, Azure PowerShell, Bicep, and Terraform, and decide which command-line tools best meet your organization's needs.
     :::column-end:::
     :::column:::
-        [:::image type="icon" source="images/":::](/cli/azure/azure-cli-learn-bash)
+        [:::image type="icon" source="images/bash-azure-cli.png":::](/cli/azure/azure-cli-learn-bash)
 
         [**Learn to use Bash with the Azure CLI**](/cli/azure/azure-cli-learn-bash)<br>
         A tutorial on how to use the Azure CLI in a Bash environment, write queries, format output, create objects using variables and randomization, create a storage account, handle errors, clean up resources, and more.
     :::column-end:::
     :::column:::
-        [:::image type="icon" source="images/":::](/training/)
+        [:::image type="icon" source="images/training-azure-data-studio.png":::](/training/modules/design-a-data-model-with-ads/)
 
-        [**title**]()<br>
-        A .
+        [**Design a Performant Data Model in Azure SQL Database with Azure Data Studio**](/training/modules/design-a-data-model-with-ads/)<br>
+        Learn how to create a data model with Azure data studio. Create indexes, tables and use data types to help develop your applications.
     :::column-end:::
 :::row-end:::
 
