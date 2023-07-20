@@ -5,7 +5,7 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 07/06/2023
+ms.date: 07/20/2023
 ---
 
 # Linux resources at Microsoft
@@ -50,9 +50,9 @@ Microsoft supports Linux with a variety of different tools and services. If youâ
         Get a unified view of threats and alerts for your environment in the Microsoft 365 Defender portal empowering you to more quickly assess and respond to these threats. Learn how to [install, configure, update, and use Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux).
     :::column-end:::
     :::column:::
-        [:::image type="icon" source="images/mariner.png":::](/dotnet/core/install/linux)
-        [**CBL-Mariner Linux distribution**](https://github.com/microsoft/CBL-Mariner)<br>
-        Mariner is an open-source Linux distribution created by Microsoft. Mariner is now available for preview as a boot-able Linux image that can be used as a container host on Azure Kubernetes Service (AKS). [Learn more about Mariner](/azure/aks/use-mariner).
+        [:::image type="icon" source="images/mariner.png":::](/azure/azure-linux/)
+        [**Azure Linux container host for AKS**](/azure/azure-linux/)<br>
+        The Azure Linux Container Host is an operating system image that's optimized for running container workloads on Azure Kubernetes Service (AKS). It's maintained by Microsoft and based on Microsoft Azure Linux, an open-source Linux distribution created by Microsoft. [Learn more.](/azure/azure-linux/intro-azure-linux)
     :::column-end:::
 :::row-end:::
 
