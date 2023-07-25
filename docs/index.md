@@ -64,7 +64,7 @@ Microsoft supports Linux with a variety of different tools and services. If youâ
     :::column:::
         [:::image type="icon" source="images/azure-powershell.png":::](/powershell/azure/install-azps-linux)
         [**Install Azure PowerShell on Linux**](/powershell/azure/install-azps-linux)<br>
-        The Azure PowerShell Az module is a rollup module. Installing it downloads the generally available Az PowerShell modules and makes their cmdlets available for use.
+        Azure PowerShell is a collection of cross-platform modules that enable you to manage all Azure resources. Its discoverable commands use `Verb-Noun` syntax, produce object-oriented output, and offer powerful automation features.
     :::column-end:::
     :::column:::
         [:::image type="icon" source="images/azure-data-studio.png":::](/sql/azure-data-studio/download-azure-data-studio#linux-installation)
