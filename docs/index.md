@@ -5,7 +5,7 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 07/06/2023
+ms.date: 08/07/2023
 ---
 
 # Linux resources at Microsoft
@@ -139,7 +139,7 @@ A variety of Linux-related training is available, ranging from Beginner to Advan
 
 ## Cloud Solution Architecture for Linux
 
-As your Linux workloads become more complex, you may consider building new or migrating existing systems to the cloud in order to increase scale, improve security, or take advantage for management tools and networking services. Learn more about how Azure supports Cloud Solution Architecture for Linux.
+As your Linux workloads become more complex, you may consider building new or migrating existing systems to the cloud in order to increase scale, improve security, or take advantage of management tools and networking services. Learn more about how Azure supports Cloud Solution Architecture for Linux.
 
 :::row:::
     :::column:::
