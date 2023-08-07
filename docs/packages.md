@@ -5,7 +5,7 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 07/06/2023
+ms.date: 08/07/2023
 ---
 
 # Linux Software Repository for Microsoft Products
@@ -49,7 +49,7 @@ The following commands will configure your Linux OS to install packages from pac
 
 If you're unsure what distribution and version you are currently running, you can try entering `lsb_release -a` (for any distro that includes the “lsb-release" package) or `cat /etc/os-release` (for any distro that uses systemd).
 
-### deb-based Linux distros
+### Debian-based Linux distributions
 
 - Download the repo config package: `curl -sSL -O https://packages.microsoft.com/config/<distribution>/<version>/packages-microsoft-prod.deb`
 
@@ -61,9 +61,9 @@ If you're unsure what distribution and version you are currently running, you ca
 
 - To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com): `sudo apt-get install <package-name>`
 
-### rpm-based Linux distros
+### Red Hat-based Linux distributions
 
-These instructions assume that the package client command is `dnf` but some rpm-based Linux distros might be using other package managers such as `tdnf`.
+The Red Hat Package Manager (rpm) instructions assume that the package client command is `dnf` but some rpm-based Linux distributions might be using other package managers, such as `tdnf`.
 
 - Download the repo config package: `curl -sSL -O https://packages.microsoft.com/config/<distribution>/<version>/packages-microsoft-prod.rpm`
 
