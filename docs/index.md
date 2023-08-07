@@ -149,7 +149,7 @@ As your Linux workloads become more complex, you may consider building new or mi
         Find architecture diagrams and technology descriptions for reference architectures, real world examples of cloud architectures, and solution ideas for common Linux workloads on Azure.
     :::column-end:::
     :::column:::
-        [:::image type="icon" source="images/linux-architecture-azure-single-vm-diagram.png":::](/azure/architecture/reference-architectures/containers/aks/baseline-aks)
+        [:::image type="icon" source="images/linux-aks-baseline-architecture.png":::](/azure/architecture/reference-architectures/containers/aks/baseline-aks)
 
         [**Baseline architecture for an Azure Kubernetes Service (AKS) cluster**](/azure/architecture/reference-architectures/containers/aks/baseline-aks)<br>
         Learn about the recommended baseline infrastructure architecture to deploy an Azure Kubernetes Service (AKS) cluster on Azure and best practices from the Azure Well-Architected Framework for deploying a networking, security, or identity infrastructure.
