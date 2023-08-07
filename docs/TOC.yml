@@ -15,7 +15,7 @@
     href: https://code.visualstudio.com/docs/setup/linux
   - name: PowerShell on Linux
     href: /powershell/scripting/install/installing-powershell-on-linux
-  - name: Mariner Linux Distribution
-    href: /azure/aks/use-mariner
+  - name: Azure Linux Container Host
+    href: /azure/azure-linux/
   - name: Microsoft Open Source Blog
     href: https://cloudblogs.microsoft.com/opensource
