@@ -5,7 +5,7 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 07/06/2023
+ms.date: 08/07/2023
 ---
 
 # Linux Software Repository for Microsoft Products
@@ -45,17 +45,35 @@ Linux Software Repository for Microsoft Products uses the GPG (GNU Privacy Guard
 
 ## Command examples for using the Linux repository service
 
-- Install a repository configuration: `curl -sSL https://packages.microsoft.com/config/<distribution>/<version>/prod.list | sudo tee /etc/apt/sources.list.d/microsoft-prod.list` (replacing `<distribution>` and `<version>` with the name of the supported Linux distribution and version you wish to use). If you're unsure what distribution and version you are currently running, you can try entering `lsb_release -a` (for any distro that includes the “lsb-release" package) or `cat /etc/os-release` (for any distro that uses systemd).
+The following commands will configure your Linux OS to install packages from packages.microsoft.com. There are instructions for deb-based systems (e.g. Debian, Ubuntu) and rpm-based systems (e.g. Fedora, RHEL).
 
-- Download the Microsoft repository GPG public key: `curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc`
+If you're unsure what distribution and version you are currently running, you can try entering `lsb_release -a` (for any distro that includes the “lsb-release" package) or `cat /etc/os-release` (for any distro that uses systemd).
 
-- Register the Microsoft repository GPG public key: `sudo dpkg -i packages-microsoft-prod.deb`
+### Debian-based Linux distributions
 
-- Delete the the Microsoft repository GPG public keys file after registering: `rm packages-microsoft-prod.deb`
+- Download the repo config package: `curl -sSL -O https://packages.microsoft.com/config/<distribution>/<version>/packages-microsoft-prod.deb`
 
-- Update package index files: `sudo <apt-get> update` (replacing `<apt-get>` with the appropriate command for the package manager used with your Linux distribution).
+- Install the repo config package: `sudo dpkg -i packages-microsoft-prod.deb`
 
-- To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com): `sudo <apt-get> install <product-name>` (replacing `<apt-get>` with the appropriate command for the package manager used with your Linux distribution and `<product-name>` with the name of the Microsoft software that you want to install). 
+- Delete the repo config package after installing: `rm packages-microsoft-prod.deb`
+
+- Update package index files: `sudo apt-get update`
+
+- To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com): `sudo apt-get install <package-name>`
+
+### Red Hat-based Linux distributions
+
+The Red Hat Package Manager (rpm) instructions assume that the package client command is `dnf` but some rpm-based Linux distributions might be using other package managers, such as `tdnf`.
+
+- Download the repo config package: `curl -sSL -O https://packages.microsoft.com/config/<distribution>/<version>/packages-microsoft-prod.rpm`
+
+- Install the repo config package: `sudo rpm -i packages-microsoft-prod.rpm`
+
+- Delete the repo config package after installing: `rm packages-microsoft-prod.rpm`
+
+- Update package index files: `sudo dnf update`
+
+- To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com): `sudo dnf install <package-name>`
 
 See [packages.microsoft.com](https://packages.microsoft.com/) find the list of supported Linux distributions and versions.
 
