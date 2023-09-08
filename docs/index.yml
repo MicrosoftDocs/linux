@@ -29,7 +29,7 @@ productDirectory:
       url: https://code.visualstudio.com/docs/setup/linux
     # Card
     - title: Install PowerShell on Linux
-      imageSrc: /media/logos/logo_powershell.svg
+      imageSrc: /media/toolbars/cil.svg
       summary: PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management program. Learn how to install PowerShell on Linux and find the currently supported Linux distributions and package managers.
       url: /powershell/scripting/install/installing-powershell-on-linux
     # Card
