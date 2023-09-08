@@ -1,8 +1,8 @@
 - name: Linux resources at Microsoft
-  href: index.md
+  href: index.yml
   items:
   - name: Install Linux
-    href: ./install.yml
+    href: ./install.md
   - name: Windows Subsystem for Linux
     href: /windows/wsl
   - name: Linux VMs in Azure
