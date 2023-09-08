@@ -5,7 +5,7 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 07/06/2023
+ms.date: 09/08/2023
 ---
 
 # How to download and install Linux
@@ -24,7 +24,7 @@ To install Linux:
     - [Create a Linux Virtual Machine (VM) on your local machine](#create-a-linux-virtual-machine-locally-using-a-hypervisor)
     - [Create a bootable USB to install bare-metal Linux](#create-a-bootable-usb-drive-to-install-bare-metal-linux)
 
-4. [After installing Linux](#step-4---after-installing-linux): Get familiar with your distribution's package manager, update and upgrade the packages available, and get familiar with the other [Linux resources at Microsoft](./index.md), such as training courses, Linux-versions of popular tools, news, and Open Source events.
+4. [After installing Linux](#step-4---after-installing-linux): Get familiar with your distribution's package manager, update and upgrade the packages available, and get familiar with the other [Linux resources at Microsoft](./index.yml), such as training courses, Linux-versions of popular tools, news, and Open Source events.
 
 ## Step 1 - Choose a method to install Linux
 
@@ -168,4 +168,4 @@ Once you have successfully installed a Linux distribution, there are a few more 
 
 1. Get familiar with the preferred package manager used by your chosen Linux distribution. Linux uses package manager's to download and update any software that you plan to use. For example, Ubuntu uses the [Advanced Packaging Tool (APT)](https://ubuntu.com/server/docs/package-management).
 2. Use your distribution's package manager to update and upgrade your distribution. Software packages in a stable release of a Linux distribution are often outdated. It is recommended to regularly run an update. You may also want to run an upgrade, which installs newer versions of any packages that you've already installed. For example, if you're using Ubuntu, run: `sudo apt update && sudo apt upgrade`.
-3. Learn more about the [Linux resources available at Microsoft](./index.md), such as Linux-specific versions of Microsoft tools like Visual Studio Code, .NET, and PowerShell, free Linux-related training courses available from the Learn catalog, and information about events, news, and the ongoing partnerships between Linux organizations and Microsoft, including the Microsoft-supported Mariner distribution.
+3. Learn more about the [Linux resources available at Microsoft](./index.yml), such as Linux-specific versions of Microsoft tools like Visual Studio Code, .NET, and PowerShell, free Linux-related training courses available from the Learn catalog, and information about events, news, and the ongoing partnerships between Linux organizations and Microsoft, including the Microsoft-supported Mariner distribution.

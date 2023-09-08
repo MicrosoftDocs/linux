@@ -2,7 +2,7 @@
 
 title: Linux Resources at Microsoft
 summary: Microsoft resources for Linux include install tools, Linux versions of MS products, Cloud Architecture, training, partnerships, news, and Open Source events.
-brand: linux
+brand: windows
 
 metadata:
   title: Linux Resources at Microsoft
@@ -19,47 +19,47 @@ productDirectory:
   items:
     # Card
     - title: Install .NET on Linux
-      imageSrc: ./images/dotnet-logo.svg
+      imageSrc: /images/dotnet-logo.svg
       summary: Learn how to how to install .NET on various Linux distributions either manually, via a package manager, or via a container. .NET is a free and open-source development platform with languages, editors, and libraries to build for web, mobile, desktop, games, and IoT.
       url: /dotnet/core/install/linux
     # Card
     - title: Install Visual Studio Code on Linux
-      imageSrc: ./images/vs-code-logo.svg
+      imageSrc: /images/vs-code-logo.svg
       summary: VS Code is a lightweight source code editor with a rich ecosystem of extensions (C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity). Learn how to install Visual Studio Code on Linux and keep it up to date via package managers.
       url: https://code.visualstudio.com/docs/setup/linux
     # Card
     - title: Install PowerShell on Linux
-      imageSrc: ./images/powershell-logo.svg
+      imageSrc: /images/powershell-logo.svg
       summary: PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management program. Learn how to install PowerShell on Linux and find the currently supported Linux distributions and package managers.
       url: /powershell/scripting/install/installing-powershell-on-linux
     # Card
     - title: Install Microsoft Edge on Linux
-      imageSrc: ./images/edge-logo.svg
+      imageSrc: /images/edge-logo.svg
       summary: Microsoft Edge, built on the same technology as Chrome, now offers the Bing AI-powered copilot, in addition to Startup boost, Efficiency mode, Microsoft Defender SmartScreen, Password monitor, Collections, Vertical or Sleeping Tabs, and more.
       url: https://www.microsoft.com/edge/download
     # Card
     - title: Install Microsoft Defender for Endpoint on Linux
-      imageSrc: ./images/defender-logo.svg
+      imageSrc: /images/defender-logo.svg
       summary: Get a unified view of threats and alerts for your environment in the Microsoft 365 Defender portal empowering you to more quickly assess and respond to these threats. Learn how to install, configure, update, and use Microsoft Defender for Endpoint on Linux.
       url: /microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux
     # Card
     - title: Azure Linux container host for AKS
-      imageSrc: ./images/aks-logo.svg
+      imageSrc: /images/aks-logo.svg
       summary: The Azure Linux Container Host is an operating system image that's optimized for running container workloads on Azure Kubernetes Service (AKS). It's maintained by Microsoft and based on Microsoft Azure Linux, an open-source Linux distribution created by Microsoft.
       url: /azure/azure-linux/
     # Card
     - title: Install the Azure CLI on Linux
-      imageSrc: ./images/azure-cli-logo.svg
+      imageSrc: /images/azure-cli-logo.svg
       summary: The Azure Command-Line Interface (CLI) is a cross-platform command-line tool to connect to Azure and execute administrative commands on Azure resources. It allows the execution of commands through a terminal using interactive command-line prompts or a script. 
       url: /cli/azure/install-azure-cli-linux
     # Card
     - title: Install Azure PowerShell on Linux
-      imageSrc: ./images/azure-powershell-logo.svg
+      imageSrc: /images/azure-powershell-logo.svg
       summary: Azure PowerShell is a collection of cross-platform modules that enable you to manage all Azure resources. Its discoverable commands use `Verb-Noun` syntax, produce object-oriented output, and offer powerful automation features. 
       url: /powershell/azure/install-azps-linux
     # Card
     - title: Install Azure Data Studio on Linux
-      imageSrc: ./images/azure-data-studio-logo.svg
+      imageSrc: /images/azure-data-studio-logo.svg
       summary: Use Azure Data Studio to query, design, and manage your databases and data warehouses wherever they are, on your local computer or in the cloud. You can install Azure Data Studio on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), Ubuntu, Debian, and Windows Subsystem for Linux (WSL). 
       url: /sql/azure-data-studio/download-azure-data-studio#linux-installation
 
@@ -80,12 +80,13 @@ conceptualContent:
             itemType: tutorial
           - text: Windows Subsystem for Linux (WSL)
             url: /linux/install#windows-subsystem-for-linux-wsl
-            itemType: tutorial
+            itemType: concept
           - text: Create a Virtual Machine (VM)
             url: /linux/install#create-a-virtual-machine-vm
-            itemType: tutorial
+            itemType: concept
           - text: Bare metal Linux
             url: /linux/install#bare-metal-linux
+            itemType: concept
           - text: Step 2 - Choose a Linux distribution
             url: /linux/install#step-2---choose-a-linux-distribution
             itemType: tutorial
@@ -163,8 +164,6 @@ additionalContent:
         - title: The One Migrate approach - Cloud Adoption
           summary: Learn about the process for migrating your core Linux applications and databases from on-premisis servers to the cloud in order to take advantage of Azure services that can simplify operations, optimize CI/CD processes, use auto-scaling, and reduce costs.
           url: /azure/cloud-adoption-framework/scenarios/
-additionalContent:
-  sections:
     - title: Microsoft + Linux news, events, and partnerships
       summary: Microsoft is one of the biggest contributors to open source projects in the world. Learn more about Microsoft + Linux partnerships, Open Source news, events, and history.
       items:
