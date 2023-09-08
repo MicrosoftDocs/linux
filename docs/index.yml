@@ -93,14 +93,51 @@ conceptualContent:
           - text: Step 3 - Follow install method instructions
             url: /linux/install#step-3---follow-install-method-instructions
             itemType: tutorial
-          - text: Step 4 - AFter installing Linux
+          - text: Step 4 - After installing Linux
             url: /linux/install#step-4---after-installing-linux
             itemType: tutorial
+          
+        # Card
+      - title: How to install Microsoft software packages using the Linux Repository
+        links:
+          - text: Examples of available Microsoft products in the Linux Repository
+            url: /linux/packages#examples-of-available-microsoft-products-in-the-linux-repository
+            itemType: sample
+          - text: How to use the GPG Repository Signing Key
+            url: /linux/packages#how-to-use-the-gpg-repository-signing-key
+            itemType: quickstart
+          - text: Command examples for using the Linux repository service
+            url: /linux/packages#command-examples-for-using-the-linux-repository-service
+            itemType: tutorial
+          - text: How to file an issue, request a feature, or report a security vulnerability
+            url: /linux/packages#how-to-file-an-issue-request-a-feature-or-report-a-security-vulnerability
+            itemType: concept
+        # Card
+      - title: Linux-related video content
+        links:
+          - text: One Dev Question - Q+A about Linux
+            url: /shows/one-dev-minute/?terms=linux
+            itemType: video
+          - text: Open at Microsoft for open-source enthusiasts
+            url: /shows/open-at-microsoft/
+            itemType: video
+          - text: Tabs vs Spaces - WSL
+            url: /shows/tabs-vs-spaces/?terms=wsl
+            itemType: video
+          - text: Azure Friday - Services for Linux
+            url: /shows/azure-friday/?terms=linux
+            itemType: video
+          - text: On .NET - with Linux
+            url: /shows/on-net/?terms=linux
+            itemType: video
+          - text: Data Exposed - SQL + Linux
+            url: /shows/data-exposed/?terms=linux
+            itemType: video
 
 additionalContent:
   # Supports up to 4 subsections
   sections:
-    - title: Linux-related training at Microsoft
+    - title: Learn to use Linux tools on a Windows machine
       summary: A variety of free Linux-related training is available, ranging from Beginner to Advanced levels of expertise.
       items:
           - title: What is WSL? (Conceptual)
