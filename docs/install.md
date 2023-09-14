@@ -111,7 +111,7 @@ By default, the install command will use the Ubuntu distribution of Linux. You c
 wsl --install -d <Distro Name>
 ```
 
-If the distribution you want to install isn't available in the Microsoft Store, see the Windows Subsystem for Linux (WSL) documentation on how to [Important any Linux distribution to use with WSL](/windows/wsl/use-custom-distro).
+If the distribution you want to install isn't available in the Microsoft Store, see the Windows Subsystem for Linux (WSL) documentation on how to [Import any Linux distribution to use with WSL](/windows/wsl/use-custom-distro).
 
 For more information on how to use VS Code, Git, databases, Docker, GUI apps, GPU acceleration, NodesJS, USB devices, or mount a disk, build a custom distribution, manage disk space, or set up WSL for your enterprise business, see the [WSL documentation](/windows/wsl/).
 
