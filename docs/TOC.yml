@@ -1,5 +1,5 @@
 - name: Linux resources at Microsoft
-  href: index.md
+  href: index.yml
   items:
   - name: Install Linux
     href: ./install.md

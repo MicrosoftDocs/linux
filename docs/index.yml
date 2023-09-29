@@ -1,0 +1,231 @@
+### YamlMime:Hub
+
+title: Linux resources at Microsoft
+summary: Microsoft resources for Linux include install tools, Linux versions of MS products, Cloud Architecture, training, partnerships, news, and Open Source events.
+brand: windows
+
+metadata:
+  title: Linux resources at Microsoft
+  description: Microsoft resources for Linux include install tools, Linux versions of MS products, Cloud Architecture, training, partnerships, news, and Open Source events.
+  ms.service: linux-resources 
+  ms.topic: hub-page
+  author: mattwojo
+  ms.author: mattwoj
+  ms.date: 09/29/2023
+
+productDirectory:
+  title: Microsoft tools that run on Linux
+  summary: Microsoft supports Linux with a variety of different tools and services. If you’re using Linux you may be interested in some of these resources.
+  items:
+    # Card
+    - title: Install .NET on Linux
+      imageSrc: /media/logos/logo_NET.svg
+      summary: Learn how to install .NET on various Linux distributions either manually, via a package manager, or via a container. .NET is a free and open-source development platform with languages, editors, and libraries to build for web, mobile, desktop, games, and IoT.
+      url: /dotnet/core/install/linux
+    # Card
+    - title: Install Visual Studio Code on Linux
+      imageSrc: /media/logos/logo_vs-code.svg
+      summary: VS Code is a lightweight source code editor with a rich ecosystem of extensions (C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity). Learn how to install Visual Studio Code on Linux and keep it up to date via package managers.
+      url: https://code.visualstudio.com/docs/setup/linux
+    # Card
+    - title: Install PowerShell on Linux
+      imageSrc: /media/toolbars/cil.svg
+      summary: PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management program. Learn how to install PowerShell on Linux and find the currently supported Linux distributions and package managers.
+      url: /powershell/scripting/install/installing-powershell-on-linux
+    # Card
+    - title: Install Microsoft Edge on Linux
+      imageSrc: /media/logos/logo_edge.svg
+      summary: Microsoft Edge, built on the same technology as Chrome, now offers the Bing AI-powered copilot, in addition to Startup boost, Efficiency mode, Microsoft Defender SmartScreen, Password monitor, Collections, Vertical or Sleeping Tabs, and more.
+      url: https://www.microsoft.com/edge/download
+    # Card
+    - title: Install Microsoft Defender for Endpoint on Linux
+      imageSrc: /media/common/i_threat-protection.svg
+      summary: Get a unified view of threats and alerts for your environment in the Microsoft 365 Defender portal empowering you to more quickly assess and respond to these threats. Learn how to install, configure, update, and use Microsoft Defender for Endpoint on Linux.
+      url: /microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux
+    # Card
+    - title: Azure Linux container host for AKS
+      imageSrc: /media/logos/logo_kubernetes.svg
+      summary: The Azure Linux Container Host is an operating system image that's optimized for running container workloads on Azure Kubernetes Service (AKS). It's maintained by Microsoft and based on Microsoft Azure Linux, an open-source Linux distribution created by Microsoft.
+      url: /azure/azure-linux/
+    # Card
+    - title: Install the Azure CLI on Linux
+      imageSrc: /media/logos/logo_azure.svg
+      summary: The Azure Command-Line Interface (CLI) is a cross-platform command-line tool to connect to Azure and execute administrative commands on Azure resources. It allows the execution of commands through a terminal using interactive command-line prompts or a script. 
+      url: /cli/azure/install-azure-cli-linux
+    # Card
+    - title: Install Azure PowerShell on Linux
+      imageSrc: /media/logos/logo_azure.svg
+      summary: Azure PowerShell is a collection of cross-platform modules that enable you to manage all Azure resources. Its discoverable commands use `Verb-Noun` syntax, produce object-oriented output, and offer powerful automation features. 
+      url: /powershell/azure/install-azps-linux
+    # Card
+    - title: Install Azure Data Studio on Linux
+      imageSrc: /media/logos/logo_azure.svg
+      summary: Use Azure Data Studio to query, design, and manage your databases and data warehouses wherever they are, on your local computer or in the cloud. You can install Azure Data Studio on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), Ubuntu, Debian, and Windows Subsystem for Linux (WSL). 
+      url: /sql/azure-data-studio/download-azure-data-studio#linux-installation
+
+# conceptualContent section (Optional; Remove if not applicable.)
+conceptualContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+  # Supports up to 3 subsections
+  sections:
+    - title: New to Linux?
+      summary: Linux is an open source, customizable, operating system with many different versions, called distributions. We can help you choose one and get started.
+      
+      items:
+      # Card
+      - title: How to download and install Linux
+        links:
+          - text: Step 1 - Choose a method to install Linux
+            url: /linux/install#step-1---choose-a-method-to-install-linux
+            itemType: tutorial
+          - text: Windows Subsystem for Linux (WSL)
+            url: /linux/install#windows-subsystem-for-linux-wsl
+            itemType: concept
+          - text: Create a Virtual Machine (VM)
+            url: /linux/install#create-a-virtual-machine-vm
+            itemType: concept
+          - text: Bare metal Linux
+            url: /linux/install#bare-metal-linux
+            itemType: concept
+          - text: Step 2 - Choose a Linux distribution
+            url: /linux/install#step-2---choose-a-linux-distribution
+            itemType: tutorial
+          - text: Step 3 - Follow install method instructions
+            url: /linux/install#step-3---follow-install-method-instructions
+            itemType: tutorial
+          - text: Step 4 - After installing Linux
+            url: /linux/install#step-4---after-installing-linux
+            itemType: tutorial
+          
+        # Card
+      - title: How to install Microsoft software packages using the Linux Repository
+        links:
+          - text: Examples of available Microsoft products in the Linux Repository
+            url: /linux/packages#examples-of-available-microsoft-products-in-the-linux-repository
+            itemType: sample
+          - text: How to use the GPG Repository Signing Key
+            url: /linux/packages#how-to-use-the-gpg-repository-signing-key
+            itemType: quickstart
+          - text: Command examples for using the Linux repository service
+            url: /linux/packages#command-examples-for-using-the-linux-repository-service
+            itemType: tutorial
+          - text: How to file an issue, request a feature, or report a security vulnerability
+            url: /linux/packages#how-to-file-an-issue-request-a-feature-or-report-a-security-vulnerability
+            itemType: concept
+        # Card
+      - title: Linux-related video content
+        links:
+          - text: One Dev Question - Q+A about Linux
+            url: /shows/one-dev-minute/?terms=linux
+            itemType: video
+          - text: Open at Microsoft for open-source enthusiasts
+            url: /shows/open-at-microsoft/
+            itemType: video
+          - text: Tabs vs Spaces - WSL
+            url: /shows/tabs-vs-spaces/?terms=wsl
+            itemType: video
+          - text: Azure Friday - Services for Linux
+            url: /shows/azure-friday/?terms=linux
+            itemType: video
+          - text: On .NET - with Linux
+            url: /shows/on-net/?terms=linux
+            itemType: video
+          - text: Data Exposed - SQL + Linux
+            url: /shows/data-exposed/?terms=linux
+            itemType: video
+
+additionalContent:
+  # Supports up to 4 subsections
+  sections:
+    - title: Learn to use Linux tools on a Windows machine
+      summary: A variety of free Linux-related training is available, ranging from Beginner to Advanced levels of expertise.
+      items:
+          - title: What is WSL? (Conceptual)
+            summary: Learn how Windows integrates with Linux using WSL.
+            url: /windows/wsl/about
+          - title: Get started with Windows Subsystem for Linux (Training)
+            summary:  Learn the basic concepts that combine Windows and Linux operating systems, including how to install one or more Linux distributions on your Windows machine.
+            url: /training/modules/wsl/wsl-introduction/
+          - title: Introduction to Bash (Training)
+            summary: Learn the basics of Bash, a vital tool for managing Linux machines, starting with the syntax and commonly used commands.
+            url: /training/modules/bash-introduction/
+          - title: Run Linux GUI apps with WSL (Tutorial)
+            summary: WSL now supports running Linux GUI apps (X11 and Wayland) on Windows in a fully integrated desktop experience.
+            url: /windows/wsl/tutorials/gui-apps
+          - title: Install Docker on Linux with WSL (Tutorial)
+            summary: Install Docker on Linux using WSL to package and run apps in a loosely isolated container environment.
+            url: /windows/wsl/tutorials/wsl-containers
+          - title: Install Node.js on Linux with WSL (Tutorial)
+            summary: Use Node.js to build server-side JavaScript apps on Linux with WSL.
+            url: /windows/dev-environment/javascript/nodejs-on-wsl
+          - title: Install React on Linux with WSL (Tutorial)
+            summary: Use React to build front end user interfaces on Linux with WSL.
+            url: /windows/dev-environment/javascript/react-on-wsl
+          - title: Install Python on Linux with WSL (Tutorial)
+            summary: Develop web apps using Python with Django or Flask in a Linux environment with WSL.
+            url: /windows/python/web-frameworks
+        
+    - title: Trainings on how to use Linux with Azure Cloud Services
+      summary: A variety of free training is also available for Linux users who want to learn how to use Azure cloud services.
+      items:
+          - title: Linux on Azure (Learning Path)
+            summary: A learning path with training modules to help you deploy and manage Linux on Azure, including cloud computing concepts, Linux IaaS and PaaS solutions, and Azure cloud services.
+            url: /training/paths/azure-linux
+          - title: Introduction to Linux on Azure (Training)
+            summary: A training module on the unique benefits of running Linux on Azure, and how to run Linux-based applications and workloads in the cloud with Azure.
+            url: /training/modules/intro-to-azure-linux
+          - title: Create a Linux virtual machine in Azure (Training)
+            summary: A training module on how to create a Linux virtual machine using the Azure portal.
+            url: /training/modules/create-linux-virtual-machine-in-azure/
+          - title: Choose the best Azure command-line tools for managing and provisioning your cloud infrastructure (Training)
+            summary: Learn the basic concepts of infrastructure as code, explore the key differences between the Azure CLI, Azure PowerShell, Bicep, and Terraform, and decide which command-line tools best meet your organization's needs.
+            url: /training/modules/azure-command-line-tools-intro/
+          - title: Learn to use Bash with the Azure CLI (Training)
+            summary: A tutorial on how to use the Azure CLI in a Bash environment, write queries, format output, create objects using variables and randomization, create a storage account, handle errors, clean up resources, and more.
+            url: /cli/azure/azure-cli-learn-bash
+          - title: Design a Performant Data Model in Azure SQL Database with Azure Data Studio (Training)
+            summary: Learn how to create a data model with Azure data studio. Create indexes, tables and use data types to help develop your applications.
+            url: /training/modules/design-a-data-model-with-ads/
+
+    - title: Cloud Solution Architecture for Linux
+      summary: Cloud Solution Architecture makes your complex Linux workloads more scalable, secure and manageable. Consider migrating or building a new system on Azure.
+      items:
+        # Card
+        - title: Browse Azure Architectures
+          summary: Find architecture diagrams and technology descriptions for reference architectures, real world examples of cloud architectures, and solution ideas for common Linux workloads on Azure.
+          url: /azure/architecture/browse/?terms=linux
+        # Card
+        - title: Baseline architecture for an Azure Kubernetes Service (AKS) cluster
+          summary: Learn about the recommended baseline infrastructure architecture to deploy an Azure Kubernetes Service (AKS) cluster on Azure and best practices from the Azure Well-Architected Framework for deploying a networking, security, or identity infrastructure.
+          url: /azure/architecture/reference-architectures/containers/aks/baseline-aks
+        # Card
+        - title: The One Migrate approach - Cloud Adoption
+          summary: Learn about the process for migrating your core Linux applications and databases from on-premisis servers to the cloud in order to take advantage of Azure services that can simplify operations, optimize CI/CD processes, use auto-scaling, and reduce costs.
+          url: /azure/cloud-adoption-framework/scenarios/
+    - title: Microsoft + Linux news, events, and partnerships
+      summary: Microsoft is one of the biggest contributors to open source projects in the world. Learn more about Microsoft + Linux partnerships, Open Source news, events, and history.
+      items:
+        # Card
+        - title: Microsoft Open Source Blog
+          summary: Read about the latest news, events, project updates, and demos/tutorials related to Open Source at Microsoft.
+          url: https://cloudblogs.microsoft.com/opensource/
+        # Card
+        - title: Windows Command Line Blog
+          summary: Read the latest updates about Windows Subsystem for Linux, Windows Terminal, and Windows Package Manager.
+          url: https://devblogs.microsoft.com/commandline/
+        # Card
+        - title: Ubuntu Blog - Microsoft
+          summary: Read the latest news related to the partnership between Canonical and Microsoft.
+          url: https://ubuntu.com/blog/tag/microsoft
+        # Card
+        - title: Microsoft joins the Linux Foundation
+          summary: Original announcement about Microsoft joining the Linux Foundation from November 2016.
+          url: https://cloudblogs.microsoft.com/opensource/2016/11/17/microsoft-joins-linux-foundation/
+        # Card
+        - title: Microsoft joins partners and the Linux Foundation to create Confidential Computing Consortium
+          summary: Original announcement about Microsoft and Linux Foundation partnering to create the Confidential Computing Consortium, dedicated to defining and accelerating the adoption of confidential computing.
+          url: https://cloudblogs.microsoft.com/opensource/2019/08/21/microsoft-partners-linux-foundation-announce-confidential-computing-consortium/
+        # Card
+        - title: Open 3D Foundation Welcomes Microsoft
+          summary: Original announcement about Microsoft joining over 25 organizations committed to democratizing 3D software development for games and simulations.
+          url: https://www.linuxfoundation.org/press/press-release/the-open-3d-foundation-welcomes-microsoft-as-a-premier-member-to-advance-the-future-of-open-source-3d-development
