@@ -5,7 +5,7 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 09/08/2023
+ms.date: 09/29/2023
 ---
 
 # How to download and install Linux
@@ -38,7 +38,7 @@ Learn more about these options below.
 
 ### Windows Subsystem for Linux (WSL)
 
-This is the most simple install method. Just run the Linux install command: `wsl --install` to install the Ubuntu distribution.
+Available to those with a Windows machine, this is the most simple way to install Linux. Just run the Linux install command: `wsl --install` to install the Ubuntu distribution.
 
 This method uses virtualization to integrate the Windows operating system (OS) with the Linux OS (running on an actual Linux kernel). You can add as many different Linux distributions as you please and run your favorite Linux tools, including GUI apps, alongside your favorite Windows tools. You can also mix and match Bash and PowerShell commands in the same command line. A Linux file system hosts your project files, while a separate Windows file systems hosts any developer tools, such as VS Code, that you'd like to work on the files with. This method of running Linux is highly efficient and performant. Once you choose a Linux distribution or opt to use the default Ubuntu distro, follow the instructions to [Use the install Linux command with Windows Subsystem for Linux](#install-linux-with-windows-subsystem-for-linux) or learn more in the [WSL documentation](/windows/wsl).
 
@@ -46,13 +46,17 @@ This method uses virtualization to integrate the Windows operating system (OS) w
 
 ### Create a Virtual Machine (VM)
 
+Available to everyone regardless if you're using a Windows or MacOS-based machine, but will require either an Azure account, if creating a VM in the cloud, or virtualization software, if creating a VM directly on your machine (locally).
+
 A VM is a digital version of a physical computer and is a popular option for running Linux in environments that may require you to scale the level of hardware support (Memory and processing power required) and the level of Security (antimalware, encryption, backups, policy management, etc).
 
-Like with WSL, you can create VM instances of as many different Linux distributions as you'd like, running them in an isolated environment, free from any conflicts and great for software development testing. While running a Linux distribution on WSL has slightly faster performance, a Linux VM is easier to clone or migrate. You can create a virtual machine on a cloud service like Azure or on your local machine, using a hypervisor.
+Like with WSL, you can create VM instances of as many different Linux distributions as you'd like, running them in an isolated environment, free from any conflicts and great for software development testing. While running a Linux distribution on WSL has slightly faster performance, a Linux VM is easier to clone or migrate. You can create a virtual machine on a cloud service like Azure or on your local machine, using virtualization software (otherwise known as a hypervisor).
 
 Creating a VM on Azure means that it's hosted in the cloud, on Microsoft's servers. You are essentially renting computing resources from Microsoft and using them to run the VM. This can be convenient if you need to quickly provision a new VM or need to run a workload that requires more computing resources than your local computer can provide. Larger businesses with more complex needs often choose to run Linux VMs on Azure for its scalability, control and abundance of features. Learn more about the architecture, workflow, and considerations to [Run a Linux VM on Azure](/azure/architecture/reference-architectures/n-tier/linux-vm).
 
-Creating a VM on your local machine requires virtualization using a hypervisor. Windows includes a "type 1" hypervisor called [Hyper-V](/virtualization/hyper-v-on-windows/) to run virtualization directly on your device hardware.There are also "type 2" hypervisors that run on top of the operating system, like VirtualBox or VMware. You are responsible for managing the virtual machine, including allocating resources like memory and disk space, and ensuring that it is secure and up-to-date. This requires more technical expertise than some of the other options and may not be as scalable or fault-tolerant.
+Creating a VM on your local machine requires virtualization using a hypervisor. Windows includes a "type 1" hypervisor called [Hyper-V](/virtualization/hyper-v-on-windows/) to run virtualization directly on your device hardware.There are also "type 2" hypervisors that run on top of the operating system, like VirtualBox or VMware. If you are using a Mac, the most commonly recommended hypervisor is "Parallels Desktop", though this is a paid service. See [Install Linux VM on a Mac with Apple M-Series chip](https://kb.parallels.com/128445). [VirtualBox](https://www.virtualbox.org/wiki/Downloads) also supports both Windows and MacOS. See [Creating and Running a Linux Virtual Machine](https://developer.apple.com/documentation/virtualization/creating_and_running_a_linux_virtual_machine) for more about how to design and run custom Linux guests on Apple silicon or Intel-based Macs.
+
+You are responsible for managing the virtual machine when using a hypervisor, including allocating resources like memory and disk space, and ensuring that it is secure and up-to-date. This requires more technical expertise than some of the other options and may not be as scalable or fault-tolerant.
 
 Once you've chosen a distribution and decided whether you want to run the VM locally, using a hypervisor, or in the cloud, using Azure, follow the instructions to [Create a Linux Virtual Machine in the Cloud](#create-a-linux-virtual-machine-in-the-cloud) or [Create a Linux Virtual Machine locally using a Hypervisor](#create-a-linux-virtual-machine-locally-using-a-hypervisor)
 
@@ -111,7 +115,7 @@ By default, the install command will use the Ubuntu distribution of Linux. You c
 wsl --install -d <Distro Name>
 ```
 
-If the distribution you want to install isn't available in the Microsoft Store, see the Windows Subsystem for Linux (WSL) documentation on how to [Important any Linux distribution to use with WSL](/windows/wsl/use-custom-distro).
+If the distribution you want to install isn't available in the Microsoft Store, see the Windows Subsystem for Linux (WSL) documentation on how to [Import any Linux distribution to use with WSL](/windows/wsl/use-custom-distro).
 
 For more information on how to use VS Code, Git, databases, Docker, GUI apps, GPU acceleration, NodesJS, USB devices, or mount a disk, build a custom distribution, manage disk space, or set up WSL for your enterprise business, see the [WSL documentation](/windows/wsl/).
 
