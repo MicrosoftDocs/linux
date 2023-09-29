@@ -11,7 +11,7 @@ metadata:
   ms.topic: hub-page
   author: mattwojo
   ms.author: mattwoj
-  ms.date: 08/28/2023
+  ms.date: 09/29/2023
 
 productDirectory:
   title: Microsoft tools that run on Linux
@@ -20,7 +20,7 @@ productDirectory:
     # Card
     - title: Install .NET on Linux
       imageSrc: /media/logos/logo_NET.svg
-      summary: Learn how to how to install .NET on various Linux distributions either manually, via a package manager, or via a container. .NET is a free and open-source development platform with languages, editors, and libraries to build for web, mobile, desktop, games, and IoT.
+      summary: Learn how to install .NET on various Linux distributions either manually, via a package manager, or via a container. .NET is a free and open-source development platform with languages, editors, and libraries to build for web, mobile, desktop, games, and IoT.
       url: /dotnet/core/install/linux
     # Card
     - title: Install Visual Studio Code on Linux
