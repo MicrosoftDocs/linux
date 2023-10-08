@@ -5,14 +5,26 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 08/07/2023
+ms.date: 10/08/2023
 ---
 
 # Linux Software Repository for Microsoft Products
 
-Microsoft builds and supports a variety of software products for Linux systems and makes them available via Linux packaging clients (apt, dnf, yum, etc). These Linux software packages are hosted on the "Linux software repository for Microsoft products": [https://packages.microsoft.com](https://packages.microsoft.com). You can file issues or pull requests on the affiliated GitHub repo: [Microsoft Linux Package Repositories](https://github.com/microsoft/linux-package-repositories).
+Linux versions of many Microsoft software products are supported and hosted on the "Linux software repository for Microsoft products": [https://packages.microsoft.com](https://packages.microsoft.com).
 
-This page offers guidance on how to download and install the "Linux software repository for Microsoft products" (https://packages.microsoft.com) to your Linux system, so you can then install and upgrade Microsoft software that is built for Linux using your distribution's standard package management tools.
+Packages.microsoft.com is a public repository meant to be consumed programmatically by Linux packaging clients, including apt (for Linux distributions like Ubuntu or Debian) dnf / yum (for RPM-based distributions like RedHat Enterprise, Fedora, CentOS, or Oracle Enterprise), or zypper (for SUSE Linux). In addition to the Linux packaging client directories, it includes related config files and keys.
+
+You can learn more about the PMC service (packages.microsoft.com), file issues or pull requests, or report a security vulnerability on the affiliated GitHub repo: [Microsoft Linux Package Repositories](https://github.com/microsoft/linux-package-repositories).
+
+This guide covers:
+
+- [How to install Microsoft software packages using the Linux Repository](#how-to-install-microsoft-software-packages-using-the-linux-repository)
+- [Examples of available Microsoft products in the Linux Repository](#examples-of-available-microsoft-products-in-the-linux-repository)
+- [How to use the GPG Repository Signing Key](#how-to-use-the-gpg-repository-signing-key)
+- [Command examples for using the Linux repository service](#command-examples-for-using-the-linux-repository-service)
+- [Command examples for using the Linux repository service]()
+- []()
+- []()
 
 ## How to install Microsoft software packages using the Linux Repository
 
@@ -76,6 +88,32 @@ The Red Hat Package Manager (rpm) instructions assume that the package client co
 - To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com): `sudo dnf install <package-name>`
 
 See [packages.microsoft.com](https://packages.microsoft.com/) find the list of supported Linux distributions and versions.
+
+## Recommendations for client package resources supported by a static interface
+
+Recommendations for using the resources on packages.microsoft.com include:
+
+- The metadata for each package should be considered the source of truth for a given package path if and when a change occurs.
+- When possible, use the config files located under `/config` and use standard Linux package managers.
+- If you need to programmatically "find" a given package, without using a package manager, be sure to parse the metadata, *not* the html.
+- Avoid depending on individual metadata files (such as `primary.sqlite.gz` or `Packages.bz2`), as these are subject to change.
+
+### Static vs subject to change
+
+When a Linux packaging client is referred to as “static”, it means that the client is designed to work with a fixed set of libraries. A static client will not dynamically link to any libraries outside of its own set and will instead use only the libraries that are included in the client itself. "Static" resources are typically more safe to depend on, but can still be subject to change.
+
+Static resources on packages.microsoft.com include:
+
+- The path to each repo's metadata, such as the `repomd.xml` or Release/Packages for Debian files. These metadata files are used by the client to determine which packages are available for installation and what their dependencies are.
+- The paths to config files located under `/config`.
+- The paths to the key files located under `/keys`.
+
+Resources that are subject to change include:
+
+- Paths to individual packages.
+- The HTML/directory browsing interface is enabled only for interactive web browsing and is not a stable or supported API. This includes the underlying structure of the HTML, as well as, the timestamp and filesize presented.
+- Package repositories often contain multiple copies of the same data in different formats. There's no guarantee that each format will be supported. For example,  Debian repositories *may* include `Packages`, `Packages.bz2`, `Packages.gz`, etc. Rpm repositories *may* include `primary.xml.gz` or `primary.sqlite.bz2`, etc. Package managers will generally prefer one of these formats, but accept an array of format options.
+- Clamav signatures located under `/clamav` will no longer be supported, with deprecation scheduled in 2023.
 
 ## How to file an issue, request a feature, or report a security vulnerability
 
