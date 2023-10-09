@@ -73,6 +73,8 @@ If you're unsure what distribution and version you are currently running, you ca
 
 - To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com): `sudo apt-get install <package-name>`
 
+See [packages.microsoft.com](https://packages.microsoft.com/) to find the list of supported Linux distributions and versions. Once the packages.microsoft.com repo has been installed an updated, you can use the package manager to list the packages available from Microsoft. For example: `apt list repository-packages packages-microsoft-prod list`
+
 ### Red Hat-based Linux distributions
 
 The Red Hat Package Manager (rpm) instructions assume that the package client command is `dnf` but some rpm-based Linux distributions might be using other package managers, such as `tdnf`.
@@ -97,7 +99,9 @@ As an example of a pckage client that uses `yum`, the steps may be slightly diff
 
 - To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com): `sudo yum install <package-name>`
 
-See [packages.microsoft.com](https://packages.microsoft.com/) to find the list of supported Linux distributions and versions.
+See [packages.microsoft.com](https://packages.microsoft.com/) to find the list of supported Linux distributions and versions. Once the packages.microsoft.com repo has been installed an updated, you can use the package manager to list the packages available from Microsoft.
+
+For example: `dnf repository-packages packages-microsoft-com-prod list` or `yum repo-pkgs packages-microsoft-com-prod list`.
 
 ## Recommendations for client package resources supported by a static interface
 
