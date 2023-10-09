@@ -22,9 +22,9 @@ This guide covers:
 - [Examples of available Microsoft products in the Linux Repository](#examples-of-available-microsoft-products-in-the-linux-repository)
 - [How to use the GPG Repository Signing Key](#how-to-use-the-gpg-repository-signing-key)
 - [Command examples for using the Linux repository service](#command-examples-for-using-the-linux-repository-service)
-- [Command examples for using the Linux repository service]()
-- []()
-- []()
+- [Command examples for using the Linux repository service](#command-examples-for-using-the-linux-repository-service)
+- [Recommendations for client package resources supported by a static interface](#recommendations-for-client-package-resources-supported-by-a-static-interface)
+- [How to file an issue, request a feature, or report a security vulnerability](#how-to-file-an-issue-request-a-feature-or-report-a-security-vulnerability)
 
 ## How to install Microsoft software packages using the Linux Repository
 
