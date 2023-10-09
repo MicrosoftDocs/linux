@@ -62,6 +62,11 @@ productDirectory:
       imageSrc: /media/logos/logo_azure.svg
       summary: Use Azure Data Studio to query, design, and manage your databases and data warehouses wherever they are, on your local computer or in the cloud. You can install Azure Data Studio on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), Ubuntu, Debian, and Windows Subsystem for Linux (WSL). 
       url: /sql/azure-data-studio/download-azure-data-studio#linux-installation
+    # Card
+    - title: Linux Software Repository for Microsoft Products
+      imageSrc: /media/logos/logo_linux-color.svg
+      summary: Microsoft builds and supports a variety of software products for Linux systems and makes them available via Linux packaging clients (apt, dnf, yum, etc) hosted on packages.microsoft.com.
+      url: /linux/packages
 
 # conceptualContent section (Optional; Remove if not applicable.)
 conceptualContent:
