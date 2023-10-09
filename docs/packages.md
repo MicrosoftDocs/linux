@@ -87,7 +87,17 @@ The Red Hat Package Manager (rpm) instructions assume that the package client co
 
 - To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com): `sudo dnf install <package-name>`
 
-See [packages.microsoft.com](https://packages.microsoft.com/) find the list of supported Linux distributions and versions.
+As an example of a pckage client that uses `yum`, the steps may be slightly different.
+
+- Download the repo config package: `curl -sSL -O https://packages.microsoft.com/config/<distribution>/<version>/packages-microsoft-prod.rpm`
+
+- Install the repo config package: `sudo rpm -i packages-microsoft-prod.rpm`
+
+- Update package index files: `sudo yum update`
+
+- To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com): `sudo yum install <package-name>`
+
+See [packages.microsoft.com](https://packages.microsoft.com/) to find the list of supported Linux distributions and versions.
 
 ## Recommendations for client package resources supported by a static interface
 
@@ -97,6 +107,7 @@ Recommendations for using the resources on packages.microsoft.com include:
 - When possible, use the config files located under `/config` and use standard Linux package managers.
 - If you need to programmatically "find" a given package, without using a package manager, be sure to parse the metadata, *not* the html.
 - Avoid depending on individual metadata files (such as `primary.sqlite.gz` or `Packages.bz2`), as these are subject to change.
+- Packages on packages.microsoft.com may incorporate material from third parties. License information for third party material may be found in the packages themselves or associated documentation. Source code for certain third party material may be available in an associated source directory. Alternatively, you may obtain corresponding source code for certain packages or material by sending an email to Opensource@microsoft.com, including the package name and version information.
 
 ### Static vs subject to change
 
