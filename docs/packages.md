@@ -73,7 +73,11 @@ If you're unsure what distribution and version you are currently running, you ca
 
 - To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com): `sudo apt-get install <package-name>`
 
-See [packages.microsoft.com](https://packages.microsoft.com/) to find the list of supported Linux distributions and versions. Once the packages.microsoft.com repo has been installed an updated, you can use the package manager to list the packages available from Microsoft. For example: `apt list repository-packages packages-microsoft-prod list`
+See [packages.microsoft.com](https://packages.microsoft.com/) to find the list of supported Linux distributions and versions. 
+
+In this example, entering `cat /etc/os-release` shows that Ubuntu, version 20.04, is running. Visiting [packages.microsoft.com](https://packages.microsoft.com/), we can see Ubuntu 20.04 on the list. To download the packages.microsoft.com repo, cURL is used to download with the command: `curl -sSL -O https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb`. The repo config package is then installed with the command: `sudo dpkg -i packages-microsoft-prod.deb` and then deleted as not to take up space. The list of packages is then updated with the apt package manager using the command: `sudo apt-get update`.
+
+To search what Microsoft packages are available after installing, change to the root directory of your Linux distribution: `cd /` and look in the directory: `/var/lib/apt/lists`. You will see a list of files with titles something like: `packages.microsoft.com_ubuntu_20.04_prod_dists_focal_main_binary-all_Packages`. You can open this file in a text editor (for example, `nano <file-name>`) to see a list of the available packages.
 
 ### Red Hat-based Linux distributions
 
