@@ -158,7 +158,7 @@ If you're new to hypervisors and want to learn more, try the free online trainin
 If you want bare-metal Linux, whether to run a distribution alone on a device or to dual-boot between the distribution and Windows, here are the steps:
 
 1. Download an image file for your chosen Linux distribution.
-    This is usually an ISO file. As an example, you can find an image file for the most recent version of Ubuntu at [Download Ubuntu Desktop](https://ubuntu.com/download/desktop). Some Linux distributions may require you to verify the image signature before downloading.
+    This is usually an ISO file. As an example, you can find an image file for the most recent version of Ubuntu at [Download Ubuntu Desktop](https://ubuntu.com/download/desktop). Some Linux distributions may require you to verify the image signature before downloading. Some Linux distributions also cannot be installed unless Windows Secure Boot is disabled (which is not recommended).
 2. Create a bootable USB drive.
     You will typically need a USB drive with at least 16gb of space. You will also need software to create the bootable drive. There are many options (such as balenaEtcher, Rufus, UNetbootin, etc.). Often the download site for your chosen Linux distribution will recommend which startup disk creater software to use.
 3. Boot your device from the USB drive.
