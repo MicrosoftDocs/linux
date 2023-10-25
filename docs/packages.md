@@ -5,14 +5,26 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 08/07/2023
+ms.date: 10/08/2023
 ---
 
 # Linux Software Repository for Microsoft Products
 
-Microsoft builds and supports a variety of software products for Linux systems and makes them available via Linux packaging clients (apt, dnf, yum, etc). These Linux software packages are hosted on the "Linux software repository for Microsoft products": [https://packages.microsoft.com](https://packages.microsoft.com). You can file issues or pull requests on the affiliated GitHub repo: [Microsoft Linux Package Repositories](https://github.com/microsoft/linux-package-repositories).
+Linux versions of many Microsoft software products are supported and hosted on the "Linux software repository for Microsoft products": [https://packages.microsoft.com](https://packages.microsoft.com).
 
-This page offers guidance on how to download and install the "Linux software repository for Microsoft products" (https://packages.microsoft.com) to your Linux system, so you can then install and upgrade Microsoft software that is built for Linux using your distribution's standard package management tools.
+Packages.microsoft.com is a public repository meant to be consumed programmatically by Linux packaging clients, including apt (for Linux distributions like Ubuntu or Debian) dnf / yum (for RPM-based distributions like RedHat Enterprise, Fedora, CentOS, or Oracle Enterprise), or zypper (for SUSE Linux). In addition to the Linux packaging client directories, it includes related config files and keys.
+
+You can learn more about the PMC service (packages.microsoft.com), file issues or pull requests, or report a security vulnerability on the affiliated GitHub repo: [Microsoft Linux Package Repositories](https://github.com/microsoft/linux-package-repositories).
+
+This guide covers:
+
+- [How to install Microsoft software packages using the Linux Repository](#how-to-install-microsoft-software-packages-using-the-linux-repository)
+- [Examples of available Microsoft products in the Linux Repository](#examples-of-available-microsoft-products-in-the-linux-repository)
+- [How to use the GPG Repository Signing Key](#how-to-use-the-gpg-repository-signing-key)
+- [Command examples for using the Linux repository service](#command-examples-for-using-the-linux-repository-service)
+- [Command examples for using the Linux repository service](#command-examples-for-using-the-linux-repository-service)
+- [Recommendations for client package resources supported by a static interface](#recommendations-for-client-package-resources-supported-by-a-static-interface)
+- [How to file an issue, request a feature, or report a security vulnerability](#how-to-file-an-issue-request-a-feature-or-report-a-security-vulnerability)
 
 ## How to install Microsoft software packages using the Linux Repository
 
@@ -61,6 +73,12 @@ If you're unsure what distribution and version you are currently running, you ca
 
 - To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com): `sudo apt-get install <package-name>`
 
+See [packages.microsoft.com](https://packages.microsoft.com/) to find the list of supported Linux distributions and versions. 
+
+In this example, entering `cat /etc/os-release` shows that Ubuntu, version 20.04, is running. Visiting [packages.microsoft.com](https://packages.microsoft.com/), we can see Ubuntu 20.04 on the list. To download the packages.microsoft.com repo, cURL is used to download with the command: `curl -sSL -O https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb`. The repo config package is then installed with the command: `sudo dpkg -i packages-microsoft-prod.deb` and then deleted as not to take up space. The list of packages is then updated with the apt package manager using the command: `sudo apt-get update`.
+
+To search what Microsoft packages are available after installing, change to the root directory of your Linux distribution: `cd /` and look in the directory: `/var/lib/apt/lists`. You will see a list of files with titles something like: `packages.microsoft.com_ubuntu_20.04_prod_dists_focal_main_binary-all_Packages`. You can open this file in a text editor (for example, `nano <file-name>`) to see a list of the available packages.
+
 ### Red Hat-based Linux distributions
 
 The Red Hat Package Manager (rpm) instructions assume that the package client command is `dnf` but some rpm-based Linux distributions might be using other package managers, such as `tdnf`.
@@ -75,7 +93,46 @@ The Red Hat Package Manager (rpm) instructions assume that the package client co
 
 - To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com): `sudo dnf install <package-name>`
 
-See [packages.microsoft.com](https://packages.microsoft.com/) find the list of supported Linux distributions and versions.
+As an example of a pckage client that uses `yum`, the steps may be slightly different.
+
+- Download the repo config package: `curl -sSL -O https://packages.microsoft.com/config/<distribution>/<version>/packages-microsoft-prod.rpm`
+
+- Install the repo config package: `sudo rpm -i packages-microsoft-prod.rpm`
+
+- Update package index files: `sudo yum update`
+
+- To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com): `sudo yum install <package-name>`
+
+See [packages.microsoft.com](https://packages.microsoft.com/) to find the list of supported Linux distributions and versions. Once the packages.microsoft.com repo has been installed an updated, you can use the package manager to list the packages available from Microsoft.
+
+For example: `dnf repository-packages packages-microsoft-com-prod list` or `yum repo-pkgs packages-microsoft-com-prod list`.
+
+## Recommendations for client package resources supported by a static interface
+
+Recommendations for using the resources on packages.microsoft.com include:
+
+- The metadata for each package should be considered the source of truth for a given package path if and when a change occurs.
+- When possible, use the config files located under `/config` and use standard Linux package managers.
+- If you need to programmatically "find" a given package, without using a package manager, be sure to parse the metadata, *not* the html.
+- Avoid depending on individual metadata files (such as `primary.sqlite.gz` or `Packages.bz2`), as these are subject to change.
+- Packages on packages.microsoft.com may incorporate material from third parties. License information for third party material may be found in the packages themselves or associated documentation. Source code for certain third party material may be available in an associated source directory. Alternatively, you may obtain corresponding source code for certain packages or material by sending an email to Opensource@microsoft.com, including the package name and version information.
+
+### Static vs subject to change
+
+When a Linux packaging client is referred to as “static”, it means that the client is designed to work with a fixed set of libraries. A static client will not dynamically link to any libraries outside of its own set and will instead use only the libraries that are included in the client itself. "Static" resources are typically more safe to depend on, but can still be subject to change.
+
+Static resources on packages.microsoft.com include:
+
+- The path to each repo's metadata, such as the `repomd.xml` or Release/Packages for Debian files. These metadata files are used by the client to determine which packages are available for installation and what their dependencies are.
+- The paths to config files located under `/config`.
+- The paths to the key files located under `/keys`.
+
+Resources that are subject to change include:
+
+- Paths to individual packages.
+- The HTML/directory browsing interface is enabled only for interactive web browsing and is not a stable or supported API. This includes the underlying structure of the HTML, as well as, the timestamp and filesize presented.
+- Package repositories often contain multiple copies of the same data in different formats. There's no guarantee that each format will be supported. For example,  Debian repositories *may* include `Packages`, `Packages.bz2`, `Packages.gz`, etc. Rpm repositories *may* include `primary.xml.gz` or `primary.sqlite.bz2`, etc. Package managers will generally prefer one of these formats, but accept an array of format options.
+- Clamav signatures located under `/clamav` will no longer be supported, with deprecation scheduled in 2023.
 
 ## How to file an issue, request a feature, or report a security vulnerability
 
