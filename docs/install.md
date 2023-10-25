@@ -5,7 +5,7 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 09/29/2023
+ms.date: 10/25/2023
 ---
 
 # How to download and install Linux
@@ -54,7 +54,7 @@ Like with WSL, you can create VM instances of as many different Linux distributi
 
 Creating a VM on Azure means that it's hosted in the cloud, on Microsoft's servers. You are essentially renting computing resources from Microsoft and using them to run the VM. This can be convenient if you need to quickly provision a new VM or need to run a workload that requires more computing resources than your local computer can provide. Larger businesses with more complex needs often choose to run Linux VMs on Azure for its scalability, control and abundance of features. Learn more about the architecture, workflow, and considerations to [Run a Linux VM on Azure](/azure/architecture/reference-architectures/n-tier/linux-vm).
 
-Creating a VM on your local machine requires virtualization using a hypervisor. Windows includes a "type 1" hypervisor called [Hyper-V](/virtualization/hyper-v-on-windows/) to run virtualization directly on your device hardware.There are also "type 2" hypervisors that run on top of the operating system, like VirtualBox or VMware. If you are using a Mac, the most commonly recommended hypervisor is "Parallels Desktop", though this is a paid service. See [Install Linux VM on a Mac with Apple M-Series chip](https://kb.parallels.com/128445). [VirtualBox](https://www.virtualbox.org/wiki/Downloads) also supports both Windows and MacOS. See [Creating and Running a Linux Virtual Machine](https://developer.apple.com/documentation/virtualization/creating_and_running_a_linux_virtual_machine) for more about how to design and run custom Linux guests on Apple silicon or Intel-based Macs.
+Creating a VM on your local machine requires virtualization using a hypervisor. Windows includes a "type 1" hypervisor called [Hyper-V](/virtualization/hyper-v-on-windows/) to run virtualization directly on your device hardware. There are also "type 2" hypervisors that run on top of the operating system, like VirtualBox or VMware. If you are using a Mac, the most commonly recommended hypervisor is "Parallels Desktop", though this is a paid service. See [Install Linux VM on a Mac with Apple M-Series chip](https://kb.parallels.com/128445). [VirtualBox](https://www.virtualbox.org/wiki/Downloads) also supports both Windows and MacOS. See [Creating and Running a Linux Virtual Machine](https://developer.apple.com/documentation/virtualization/creating_and_running_a_linux_virtual_machine) for more about how to design and run custom Linux guests on Apple silicon or Intel-based Macs.
 
 You are responsible for managing the virtual machine when using a hypervisor, including allocating resources like memory and disk space, and ensuring that it is secure and up-to-date. This requires more technical expertise than some of the other options and may not be as scalable or fault-tolerant.
 
@@ -66,11 +66,14 @@ Once you've chosen a distribution and decided whether you want to run the VM loc
 
 Bare metal Linux just means that Linux is running directly on the device hardware. This install method requires you to create a bootable USB drive by downloading an iso install file from the site hosting your chosen Linux distribution. You will need to use a Windows computer (or any desktop device with an existing OS) to create this drive.
 
-Many users choose the traditional method of installing bare metal Linux on a device that is also running Windows and using the **"dual boot"** method. To dual boot Linux and Windows, you need to partition your hard drive to create separate spaces for both the Linux and Windows OS. The performance speed between WSL, virtual machines, and bare metal Linux has become so close that few developers choose this method due to the overhead of needing to restart (reboot) your device any time you want to switch between the operating systems. If you choose the bare metal Linux install route, you may also need to deal with potential driver issues or hardware compatibility problems that may arise with Linux on some devices.
+Many users choose the traditional method of installing bare metal Linux on a device that is also running Windows and using the **"dual boot"** method. To  boot Linux and Windows, you need to partition your hard drive to create separate spaces for both the Linux and Windows OS. The performance speed between WSL, virtual machines, and bare metal Linux has become so close that few developers choose this method due to the overhead of needing to restart (reboot) your device any time you want to switch between the operating systems. If you choose the bare metal Linux install route, you may also need to deal with potential driver issues or hardware compatibility problems that may arise with Linux on some devices.
 
 You can find a list of [Popular Linux Distributions available for download on Linux.org](https://linux.org/pages/download/). Once you've chosen a distro, follow the instructions to [Create a bootable USB to install bare-metal Linux](#create-a-bootable-usb-drive-to-install-bare-metal-linux).
 
 ![Create a bootable USB screenshot](./images/usb-setup-screenshot.png)
+
+> [!WARNING]
+> If you are planning to dual boot or live boot a bare metal Linux distribution and your Windows machine is using [Bitlocker](/windows/security/operating-system-security/data-protection/bitlocker/) for encryption to protect data theft or exposure, be certain to [retrieve and store your BitLocker encryption keys](https://support.microsoft.com/windows/finding-your-bitlocker-recovery-key-in-windows-6b71ad27-0b89-ea08-f143-056f5ab347d6) prior to installing Linux. Learn more in this Microsoft Q&A: [Can I use Bitlocker with Dual-Boot setup?](https://answers.microsoft.com/windows/forum/all/can-i-use-bitlocker-with-dual-boot-setup/624f9920-4e9d-4824-abc4-405c60f8e6b0)
 
 ## Step 2 - Choose a Linux distribution
 
@@ -155,7 +158,7 @@ If you're new to hypervisors and want to learn more, try the free online trainin
 If you want bare-metal Linux, whether to run a distribution alone on a device or to dual-boot between the distribution and Windows, here are the steps:
 
 1. Download an image file for your chosen Linux distribution.
-    This is usually an ISO file. As an example, you can find an image file for the most recent version of Ubuntu at [Download Ubuntu Desktop](https://ubuntu.com/download/desktop). Some Linux distributions may require you to verify the image signature before downloading.
+    This is usually an ISO file. As an example, you can find an image file for the most recent version of Ubuntu at [Download Ubuntu Desktop](https://ubuntu.com/download/desktop). Some Linux distributions may require you to verify the image signature before downloading. Some Linux distributions also cannot be installed unless Windows Secure Boot is disabled (which is not recommended).
 2. Create a bootable USB drive.
     You will typically need a USB drive with at least 16gb of space. You will also need software to create the bootable drive. There are many options (such as balenaEtcher, Rufus, UNetbootin, etc.). Often the download site for your chosen Linux distribution will recommend which startup disk creater software to use.
 3. Boot your device from the USB drive.
