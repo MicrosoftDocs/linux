@@ -16,7 +16,7 @@ To install Linux:
 
 1. [Choose an install method](#step-1---choose-a-method-to-install-linux): Windows Subsystem for Linux (WSL), Bare metal Linux; or create a Virtual Machine (VM) to run Linux locally or in the cloud.
 
-2. [Choose a Linux distribution](#step-2---choose-a-linux-distribution): Ubuntu, Debian, Kali Linux, OpenSUSE, etc.
+2. [Choose a Linux distribution](#step-2---choose-a-linux-distribution): Ubuntu, Debian, Kali Linux, openSUSE, etc.
 
 3. [Follow the steps for your preferred install method](#step-3---follow-install-method-instructions):
     - [Use the install Linux command with Windows Subsystem for Linux (WSL)](#install-linux-with-windows-subsystem-for-linux)
@@ -74,7 +74,7 @@ You can find a list of [Popular Linux Distributions available for download on Li
 
 ## Step 2 - Choose a Linux distribution
 
-The different versions of Linux are called "distributions" (sometimes shortened to “distros”). So there isn’t actually a way to just “install Linux”, you first need to choose which distribution that uses the Linux kernel you want to download and install. There are over 600 active Linux distributions, such as Ubuntu, Debian, Kali Linux, OpenSUSE, and more. There are a number of factors to consider in choosing a distribution, such as:
+The different versions of Linux are called "distributions" (sometimes shortened to “distros”). So there isn’t actually a way to just “install Linux”, you first need to choose which distribution that uses the Linux kernel you want to download and install. There are over 600 active Linux distributions, such as Ubuntu, Debian, Kali Linux, openSUSE, and more. There are a number of factors to consider in choosing a distribution, such as:
 
 ### Required Linux experience
 
@@ -87,11 +87,11 @@ Security needs: Some Linux users may have specific security concerns to consider
 
 ### Business and Enterprise requirements
 
-Business, corporate, or academic environments may have unique concerns from consumer environments. Both Red Hat Enterprise Linux (RHEL) and Oracle Linux offer 24/7 global support and subscription-based service. CentOS is another popular enterprise distro that is community-supported but still compatible with RHEL.
+Business, corporate, or academic environments may have unique concerns from consumer environments. For example Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) and Oracle Linux offer 24/7 global support and subscription-based service. CentOS is another popular enterprise distro that is community-supported but still compatible with RHEL.
 
 ### Community support
 
-A large user community that consistently contributes to the distribution, fixing bugs, adding features, helping with questions, etc. is another good consideration. Ubuntu is one of the most popular distos. OpenSUSE has been around longer than most other distributions and still receives active updates. Many other distros rapidly grow popular as the needs and preferences of the user community change. The Linux.org site has resources to help you assess what's available, well-supported, or growing in popularity.
+A large user community that consistently contributes to the distribution, fixing bugs, adding features, helping with questions, etc. is another good consideration. Ubuntu is one of the most popular distos. openSUSE has been around longer than most other distributions and offers in addition to the stable version (Leap) a rolling version (Tumbleweed). Many other distros rapidly grow popular as the needs and preferences of the user community change. The Linux.org site has resources to help you assess what's available, well-supported, or growing in popularity.
 
 ![Screenshot of the list of distributions on Linux.org](./images/linux-distributions-list-screenshot.png)
 
