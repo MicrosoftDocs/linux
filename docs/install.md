@@ -5,7 +5,7 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 09/29/2023
+ms.date: 10/25/2023
 ---
 
 # How to download and install Linux
@@ -16,7 +16,7 @@ To install Linux:
 
 1. [Choose an install method](#step-1---choose-a-method-to-install-linux): Windows Subsystem for Linux (WSL), Bare metal Linux; or create a Virtual Machine (VM) to run Linux locally or in the cloud.
 
-2. [Choose a Linux distribution](#step-2---choose-a-linux-distribution): Ubuntu, Debian, Kali Linux, OpenSUSE, etc.
+2. [Choose a Linux distribution](#step-2---choose-a-linux-distribution): Ubuntu, Debian, Kali Linux, openSUSE, etc.
 
 3. [Follow the steps for your preferred install method](#step-3---follow-install-method-instructions):
     - [Use the install Linux command with Windows Subsystem for Linux (WSL)](#install-linux-with-windows-subsystem-for-linux)
@@ -54,7 +54,7 @@ Like with WSL, you can create VM instances of as many different Linux distributi
 
 Creating a VM on Azure means that it's hosted in the cloud, on Microsoft's servers. You are essentially renting computing resources from Microsoft and using them to run the VM. This can be convenient if you need to quickly provision a new VM or need to run a workload that requires more computing resources than your local computer can provide. Larger businesses with more complex needs often choose to run Linux VMs on Azure for its scalability, control and abundance of features. Learn more about the architecture, workflow, and considerations to [Run a Linux VM on Azure](/azure/architecture/reference-architectures/n-tier/linux-vm).
 
-Creating a VM on your local machine requires virtualization using a hypervisor. Windows includes a "type 1" hypervisor called [Hyper-V](/virtualization/hyper-v-on-windows/) to run virtualization directly on your device hardware.There are also "type 2" hypervisors that run on top of the operating system, like VirtualBox or VMware. If you are using a Mac, the most commonly recommended hypervisor is "Parallels Desktop", though this is a paid service. See [Install Linux VM on a Mac with Apple M-Series chip](https://kb.parallels.com/128445). [VirtualBox](https://www.virtualbox.org/wiki/Downloads) also supports both Windows and MacOS. See [Creating and Running a Linux Virtual Machine](https://developer.apple.com/documentation/virtualization/creating_and_running_a_linux_virtual_machine) for more about how to design and run custom Linux guests on Apple silicon or Intel-based Macs.
+Creating a VM on your local machine requires virtualization using a hypervisor. Windows includes a "type 1" hypervisor called [Hyper-V](/virtualization/hyper-v-on-windows/) to run virtualization directly on your device hardware. There are also "type 2" hypervisors that run on top of the operating system, like VirtualBox or VMware. If you are using a Mac, the most commonly recommended hypervisor is "Parallels Desktop", though this is a paid service. See [Install Linux VM on a Mac with Apple M-Series chip](https://kb.parallels.com/128445). [VirtualBox](https://www.virtualbox.org/wiki/Downloads) also supports both Windows and MacOS. See [Creating and Running a Linux Virtual Machine](https://developer.apple.com/documentation/virtualization/creating_and_running_a_linux_virtual_machine) for more about how to design and run custom Linux guests on Apple silicon or Intel-based Macs.
 
 You are responsible for managing the virtual machine when using a hypervisor, including allocating resources like memory and disk space, and ensuring that it is secure and up-to-date. This requires more technical expertise than some of the other options and may not be as scalable or fault-tolerant.
 
@@ -66,15 +66,18 @@ Once you've chosen a distribution and decided whether you want to run the VM loc
 
 Bare metal Linux just means that Linux is running directly on the device hardware. This install method requires you to create a bootable USB drive by downloading an iso install file from the site hosting your chosen Linux distribution. You will need to use a Windows computer (or any desktop device with an existing OS) to create this drive.
 
-Many users choose the traditional method of installing bare metal Linux on a device that is also running Windows and using the **"dual boot"** method. To dual boot Linux and Windows, you need to partition your hard drive to create separate spaces for both the Linux and Windows OS. The performance speed between WSL, virtual machines, and bare metal Linux has become so close that few developers choose this method due to the overhead of needing to restart (reboot) your device any time you want to switch between the operating systems. If you choose the bare metal Linux install route, you may also need to deal with potential driver issues or hardware compatibility problems that may arise with Linux on some devices.
+Many users choose the traditional method of installing bare metal Linux on a device that is also running Windows and using the **"dual boot"** method. To  boot Linux and Windows, you need to partition your hard drive to create separate spaces for both the Linux and Windows OS. The performance speed between WSL, virtual machines, and bare metal Linux has become so close that few developers choose this method due to the overhead of needing to restart (reboot) your device any time you want to switch between the operating systems. If you choose the bare metal Linux install route, you may also need to deal with potential driver issues or hardware compatibility problems that may arise with Linux on some devices.
 
 You can find a list of [Popular Linux Distributions available for download on Linux.org](https://linux.org/pages/download/). Once you've chosen a distro, follow the instructions to [Create a bootable USB to install bare-metal Linux](#create-a-bootable-usb-drive-to-install-bare-metal-linux).
 
 ![Create a bootable USB screenshot](./images/usb-setup-screenshot.png)
 
+> [!WARNING]
+> If you are planning to dual boot or live boot a bare metal Linux distribution and your Windows machine is using [Bitlocker](/windows/security/operating-system-security/data-protection/bitlocker/) for encryption to protect data theft or exposure, be certain to [retrieve and store your BitLocker encryption keys](https://support.microsoft.com/windows/finding-your-bitlocker-recovery-key-in-windows-6b71ad27-0b89-ea08-f143-056f5ab347d6) prior to installing Linux. Learn more in this Microsoft Q&A: [Can I use Bitlocker with Dual-Boot setup?](https://answers.microsoft.com/en-us/windows/forum/all/can-i-use-bitlocker-with-dual-boot-setup/624f9920-4e9d-4824-abc4-405c60f8e6b0)
+
 ## Step 2 - Choose a Linux distribution
 
-The different versions of Linux are called "distributions" (sometimes shortened to “distros”). So there isn’t actually a way to just “install Linux”, you first need to choose which distribution that uses the Linux kernel you want to download and install. There are over 600 active Linux distributions, such as Ubuntu, Debian, Kali Linux, OpenSUSE, and more. There are a number of factors to consider in choosing a distribution, such as:
+The different versions of Linux are called "distributions" (sometimes shortened to “distros”). So there isn’t actually a way to just “install Linux”, you first need to choose which distribution that uses the Linux kernel you want to download and install. There are over 600 active Linux distributions, such as Ubuntu, Debian, Kali Linux, openSUSE, and more. There are a number of factors to consider in choosing a distribution, such as:
 
 ### Required Linux experience
 
@@ -87,11 +90,11 @@ Security needs: Some Linux users may have specific security concerns to consider
 
 ### Business and Enterprise requirements
 
-Business, corporate, or academic environments may have unique concerns from consumer environments. Both Red Hat Enterprise Linux (RHEL) and Oracle Linux offer 24/7 global support and subscription-based service. CentOS is another popular enterprise distro that is community-supported but still compatible with RHEL.
+Business, corporate, or academic environments may have unique concerns from consumer environments. For example Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) and Oracle Linux offer 24/7 global support and subscription-based service. CentOS is another popular enterprise distro that is community-supported but still compatible with RHEL.
 
 ### Community support
 
-A large user community that consistently contributes to the distribution, fixing bugs, adding features, helping with questions, etc. is another good consideration. Ubuntu is one of the most popular distos. OpenSUSE has been around longer than most other distributions and still receives active updates. Many other distros rapidly grow popular as the needs and preferences of the user community change. The Linux.org site has resources to help you assess what's available, well-supported, or growing in popularity.
+A large user community that consistently contributes to the distribution, fixing bugs, adding features, helping with questions, etc. is another good consideration. Ubuntu is one of the most popular distos. openSUSE has been around longer than most other distributions and offers in addition to the stable version (Leap) a rolling version (Tumbleweed). Many other distros rapidly grow popular as the needs and preferences of the user community change. The Linux.org site has resources to help you assess what's available, well-supported, or growing in popularity.
 
 ![Screenshot of the list of distributions on Linux.org](./images/linux-distributions-list-screenshot.png)
 
@@ -155,7 +158,7 @@ If you're new to hypervisors and want to learn more, try the free online trainin
 If you want bare-metal Linux, whether to run a distribution alone on a device or to dual-boot between the distribution and Windows, here are the steps:
 
 1. Download an image file for your chosen Linux distribution.
-    This is usually an ISO file. As an example, you can find an image file for the most recent version of Ubuntu at [Download Ubuntu Desktop](https://ubuntu.com/download/desktop). Some Linux distributions may require you to verify the image signature before downloading.
+    This is usually an ISO file. As an example, you can find an image file for the most recent version of Ubuntu at [Download Ubuntu Desktop](https://ubuntu.com/download/desktop). Some Linux distributions may require you to verify the image signature before downloading. Some Linux distributions also cannot be installed unless Windows Secure Boot is disabled (which is not recommended).
 2. Create a bootable USB drive.
     You will typically need a USB drive with at least 16gb of space. You will also need software to create the bootable drive. There are many options (such as balenaEtcher, Rufus, UNetbootin, etc.). Often the download site for your chosen Linux distribution will recommend which startup disk creater software to use.
 3. Boot your device from the USB drive.
