@@ -73,7 +73,7 @@ You can find a list of [Popular Linux Distributions available for download on Li
 ![Create a bootable USB screenshot](./images/usb-setup-screenshot.png)
 
 > [!WARNING]
-> If you are planning to dual boot or live boot a bare metal Linux distribution and your Windows machine is using [Bitlocker](/windows/security/operating-system-security/data-protection/bitlocker/) for encryption to protect data theft or exposure, be certain to [retrieve and store your BitLocker encryption keys](https://support.microsoft.com/windows/finding-your-bitlocker-recovery-key-in-windows-6b71ad27-0b89-ea08-f143-056f5ab347d6) prior to installing Linux. Learn more in this Microsoft Q&A: [Can I use Bitlocker with Dual-Boot setup?](https://answers.microsoft.com/windows/forum/all/can-i-use-bitlocker-with-dual-boot-setup/624f9920-4e9d-4824-abc4-405c60f8e6b0)
+> If you are planning to dual boot or live boot a bare metal Linux distribution and your Windows machine is using [Bitlocker](/windows/security/operating-system-security/data-protection/bitlocker/) for encryption to protect data theft or exposure, be certain to [retrieve and store your BitLocker encryption keys](https://support.microsoft.com/windows/finding-your-bitlocker-recovery-key-in-windows-6b71ad27-0b89-ea08-f143-056f5ab347d6) prior to installing Linux. Learn more in this Microsoft Q&A: [Can I use Bitlocker with Dual-Boot setup?](https://answers.microsoft.com/en-us/windows/forum/all/can-i-use-bitlocker-with-dual-boot-setup/624f9920-4e9d-4824-abc4-405c60f8e6b0)
 
 ## Step 2 - Choose a Linux distribution
 
