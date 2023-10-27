@@ -1,17 +1,17 @@
 ### YamlMime:Hub
 
 title: Linux resources at Microsoft
-summary: Microsoft resources for Linux include install tools, Linux versions of MS products, Cloud Architecture, training, partnerships, news, and Open Source events.
+summary: Microsoft resources for Linux include install tools, Linux versions of MS products, cloud architecture, training, partnerships, news, and Open Source events.
 brand: windows
 
 metadata:
   title: Linux resources at Microsoft
-  description: Microsoft resources for Linux include install tools, Linux versions of MS products, Cloud Architecture, training, partnerships, news, and Open Source events.
+  description: Explore Linux resources at Microsoft including install tools, Linux versions of MS products, cloud architecture, training, partnerships, news, and Open Source events. Microsoft Loves Linux!
   ms.service: linux-resources 
   ms.topic: hub-page
   author: mattwojo
   ms.author: mattwoj
-  ms.date: 09/29/2023
+  ms.date: 10/27/2023
 
 productDirectory:
   title: Microsoft tools that run on Linux
