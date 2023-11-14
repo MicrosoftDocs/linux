@@ -5,7 +5,7 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 10/08/2023
+ms.date: 11/14/2023
 ---
 
 # Linux Software Repository for Microsoft Products
@@ -15,16 +15,6 @@ Linux versions of many Microsoft software products are supported and hosted on t
 Packages.microsoft.com is a public repository meant to be consumed programmatically by Linux packaging clients, including apt (for Linux distributions like Ubuntu or Debian) dnf / yum (for RPM-based distributions like RedHat Enterprise, Fedora, CentOS, or Oracle Enterprise), or zypper (for SUSE Linux). In addition to the Linux packaging client directories, it includes related config files and keys.
 
 You can learn more about the PMC service (packages.microsoft.com), file issues or pull requests, or report a security vulnerability on the affiliated GitHub repo: [Microsoft Linux Package Repositories](https://github.com/microsoft/linux-package-repositories).
-
-This guide covers:
-
-- [How to install Microsoft software packages using the Linux Repository](#how-to-install-microsoft-software-packages-using-the-linux-repository)
-- [Examples of available Microsoft products in the Linux Repository](#examples-of-available-microsoft-products-in-the-linux-repository)
-- [How to use the GPG Repository Signing Key](#how-to-use-the-gpg-repository-signing-key)
-- [Command examples for using the Linux repository service](#command-examples-for-using-the-linux-repository-service)
-- [Command examples for using the Linux repository service](#command-examples-for-using-the-linux-repository-service)
-- [Recommendations for client package resources supported by a static interface](#recommendations-for-client-package-resources-supported-by-a-static-interface)
-- [How to file an issue, request a feature, or report a security vulnerability](#how-to-file-an-issue-request-a-feature-or-report-a-security-vulnerability)
 
 ## How to install Microsoft software packages using the Linux Repository
 
