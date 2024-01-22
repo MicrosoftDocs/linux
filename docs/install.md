@@ -5,7 +5,7 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 10/25/2023
+ms.date: 01/22/2024
 ---
 
 # How to download and install Linux
@@ -166,6 +166,9 @@ If you want bare-metal Linux, whether to run a distribution alone on a device or
 4. Select install options.
     Typically the installer for your Linux distribution will include a set of installation steps that will involve choosing options about whether you want to include certain features, third-party software packages, etc. You may also need to specify whether to erase the disk in the case that this Linux distro will be the only operating system, or to use a partition, if you plan to run multiple operating systems. You may also be asked about whether you'd like to enable encryption.
 5. Finally, as with any Linux installation, you will be asked to create a user name and password.
+
+> [!IMPORTANT]
+> You will need to remove the USB drive after installing, during the reboot.
 
 ![Ubuntu install screenshot](./images/ubuntu-install-screenshot.png)
 
