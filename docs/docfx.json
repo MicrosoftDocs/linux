@@ -42,9 +42,10 @@
     "globalMetadata": {
       "breadcrumb_path": "/linux/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/linux",
-      "feedback_product_url": "MicrosoftDocs/linux"
+      "feedback_system": "Standard",
+      "feedback_product_url": "https://github.com/microsoft/WSL/issues",
+      "feedback_help_link_url": "https://learn.microsoft.com/answers/",
+      "feedback_help_link_type": "get-help-at-qna"
     },
     "fileMetadata": {
       "ms.service":

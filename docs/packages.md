@@ -5,7 +5,7 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 10/08/2023
+ms.date: 11/14/2023
 ---
 
 # Linux Software Repository for Microsoft Products
@@ -16,22 +16,12 @@ Packages.microsoft.com is a public repository meant to be consumed programmatica
 
 You can learn more about the PMC service (packages.microsoft.com), file issues or pull requests, or report a security vulnerability on the affiliated GitHub repo: [Microsoft Linux Package Repositories](https://github.com/microsoft/linux-package-repositories).
 
-This guide covers:
-
-- [How to install Microsoft software packages using the Linux Repository](#how-to-install-microsoft-software-packages-using-the-linux-repository)
-- [Examples of available Microsoft products in the Linux Repository](#examples-of-available-microsoft-products-in-the-linux-repository)
-- [How to use the GPG Repository Signing Key](#how-to-use-the-gpg-repository-signing-key)
-- [Command examples for using the Linux repository service](#command-examples-for-using-the-linux-repository-service)
-- [Command examples for using the Linux repository service](#command-examples-for-using-the-linux-repository-service)
-- [Recommendations for client package resources supported by a static interface](#recommendations-for-client-package-resources-supported-by-a-static-interface)
-- [How to file an issue, request a feature, or report a security vulnerability](#how-to-file-an-issue-request-a-feature-or-report-a-security-vulnerability)
-
 ## How to install Microsoft software packages using the Linux Repository
 
 The Linux Software Repository can be configured to automatically install the Linux package that applies to your Linux distribution and version. Each Microsoft product may require a slightly different installation process. The package install includes the repository configuration, along with the GPG public key used to validate the signed packages and/or repository metadata.
 
 > [!NOTE]
-> Optionally, if you prefer manual configuration, the Linux Software Repository configuration files are available at [https://packages.microsoft.com/config](https://packages.microsoft.com/config). The name and location of these files can be located using the following URI naming convention:
+> Optionally, if you prefer manual configuration, the Linux Software Repository configuration files are available at [https://packages.microsoft.com/config](https://packages.microsoft.com/config/). The name and location of these files can be located using the following URI naming convention:
 `https://packages.microsoft.com/config/<Distribution>/<Version>/prod.(repo|list)`
 
 ### Examples of available Microsoft products in the Linux Repository
