@@ -21,7 +21,7 @@ You can learn more about the PMC service (packages.microsoft.com), file issues o
 The Linux Software Repository can be configured to automatically install the Linux package that applies to your Linux distribution and version. Each Microsoft product may require a slightly different installation process. The package install includes the repository configuration, along with the GPG public key used to validate the signed packages and/or repository metadata.
 
 > [!NOTE]
-> Optionally, if you prefer manual configuration, the Linux Software Repository configuration files are available at [https://packages.microsoft.com/config](https://packages.microsoft.com/config). The name and location of these files can be located using the following URI naming convention:
+> Optionally, if you prefer manual configuration, the Linux Software Repository configuration files are available at [https://packages.microsoft.com/config](https://packages.microsoft.com/config/). The name and location of these files can be located using the following URI naming convention:
 `https://packages.microsoft.com/config/<Distribution>/<Version>/prod.(repo|list)`
 
 ### Examples of available Microsoft products in the Linux Repository
