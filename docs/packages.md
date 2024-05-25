@@ -32,7 +32,7 @@ The following Microsoft products are a few examples that offer Linux versions su
 - [PowerShell on Linux](/powershell/scripting/install/installing-powershell-on-linux)
 - [Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux): ([Manual deployment guide](/microsoft-365/security/defender-endpoint/linux-install-manually))
 - [SQL Server on Linux](/sql/linux/sql-server-linux-overview): ([Offline install guidance](/sql/linux/sql-server-linux-setup#offline))
-- [Microsoft InTune for Linux](/mem/intune/user-help/microsoft-intune-app-linux)
+- [Microsoft Intune for Linux](/mem/intune/user-help/microsoft-intune-app-linux)
 
 > [!IMPORTANT]
 > Packages in the Linux Software Repository are subject to the license terms located in each package. Please read the license terms prior to using the package. Your installation and use of the package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use the package.
