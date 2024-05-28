@@ -145,9 +145,12 @@ additionalContent:
     - title: Learn to use Linux tools on a Windows machine
       summary: A variety of free Linux-related training is available, ranging from Beginner to Advanced levels of expertise.
       items:
-          - title: What is WSL? (Conceptual)
+          - title: What is WSL?
             summary: Learn how Windows integrates with Linux using WSL.
             url: /windows/wsl/about
+          - title: Sudo for Windows
+            summary: Learn how to run elevated commands (as an administrator) directly from an unelevated console session on Windows.
+            url: /windows/sudo/
           - title: Get started with Windows Subsystem for Linux (Training)
             summary:  Learn the basic concepts that combine Windows and Linux operating systems, including how to install one or more Linux distributions on your Windows machine.
             url: /training/modules/wsl/wsl-introduction/
