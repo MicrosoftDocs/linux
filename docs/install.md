@@ -179,3 +179,7 @@ Once you have successfully installed a Linux distribution, there are a few more 
 1. Get familiar with the preferred package manager used by your chosen Linux distribution. Linux uses package manager's to download and update any software that you plan to use. For example, Ubuntu uses the [Advanced Packaging Tool (APT)](https://ubuntu.com/server/docs/package-management).
 2. Use your distribution's package manager to update and upgrade your distribution. Software packages in a stable release of a Linux distribution are often outdated. It is recommended to regularly run an update. You may also want to run an upgrade, which installs newer versions of any packages that you've already installed. For example, if you're using Ubuntu, run: `sudo apt update && sudo apt upgrade`.
 3. Learn more about the [Linux resources available at Microsoft](./index.yml), such as Linux-specific versions of Microsoft tools like Visual Studio Code, .NET, and PowerShell, free Linux-related training courses available from the Learn catalog, and information about events, news, and the ongoing partnerships between Linux organizations and Microsoft, including the Microsoft-supported Mariner distribution.
+
+## Sudo for Windows
+
+If you're using Windows, but accustomed to BASH commands, you may be interested in [Sudo for Windows](/windows/sudo/), a new way for users to run elevated commands (as an administrator) directly from an unelevated console session on Windows.
