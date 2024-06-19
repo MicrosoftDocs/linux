@@ -17,6 +17,11 @@ productDirectory:
   title: Microsoft tools that run on Linux
   summary: Microsoft supports Linux with a variety of different tools and services. If you’re using Linux you may be interested in some of these resources.
   items:
+      # Card
+    - title: Linux Software Repository for Microsoft Products
+      imageSrc: /media/logos/logo_linux-color.svg
+      summary: Microsoft builds and supports a variety of software products for Linux systems and makes them available via Linux packaging clients (apt, dnf, yum, etc) hosted on packages.microsoft.com.
+      url: /linux/packages
     # Card
     - title: Install .NET on Linux
       imageSrc: /media/logos/logo_NET.svg
@@ -63,19 +68,18 @@ productDirectory:
       summary: Use Azure Data Studio to query, design, and manage your databases and data warehouses wherever they are, on your local computer or in the cloud. You can install Azure Data Studio on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), Ubuntu, Debian, and Windows Subsystem for Linux (WSL). 
       url: /sql/azure-data-studio/download-azure-data-studio#linux-installation
     # Card
-    - title: Linux Software Repository for Microsoft Products
-      imageSrc: /media/logos/logo_linux-color.svg
-      summary: Microsoft builds and supports a variety of software products for Linux systems and makes them available via Linux packaging clients (apt, dnf, yum, etc) hosted on packages.microsoft.com.
-      url: /linux/packages
+    - title: Azure Linux (CBL-Mariner)
+      imageSrc: /media/logos/logo_azure.svg
+      summary: Azure Linux (aka CBL-Mariner) is an open-source Linux distribution created by Microsoft. It's optimized for running container workloads on Azure Kubernetes Service (AKS). 
+      url: https://github.com/microsoft/azurelinux
 
 # conceptualContent section (Optional; Remove if not applicable.)
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
   # Supports up to 3 subsections
   sections:
-    - title: New to Linux?
+    - title: Linux in the Microsoft Ecosystem
       summary: Linux is an open source, customizable, operating system with many different versions, called distributions. We can help you choose one and get started.
-      
       items:
       # Card
       - title: How to download and install Linux
@@ -142,7 +146,7 @@ conceptualContent:
 additionalContent:
   # Supports up to 4 subsections
   sections:
-    - title: Learn to use Linux tools on a Windows machine
+    - title: Run Linux locally with Windows
       summary: A variety of free Linux-related training is available, ranging from Beginner to Advanced levels of expertise.
       items:
           - title: What is WSL?
@@ -173,7 +177,7 @@ additionalContent:
             summary: Develop web apps using Python with Django or Flask in a Linux environment with WSL.
             url: /windows/python/web-frameworks
         
-    - title: Trainings on how to use Linux with Azure Cloud Services
+    - title: Linux in the cloud with Azure
       summary: A variety of free training is also available for Linux users who want to learn how to use Azure cloud services.
       items:
           - title: Linux on Azure (Learning Path)
