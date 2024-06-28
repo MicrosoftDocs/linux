@@ -94,13 +94,13 @@ To search what Microsoft packages are available after installing, change to the 
 
 ### Red Hat-based Linux distributions
 
-The Red Hat Package Manager (rpm) instructions assume that the package client command is `dnf` but some rpm-based Linux distributions might be using other package managers, such as `tdnf`.
+The Red Hat Package Manager (rpm) instructions assume that the package management client command is `dnf` but some rpm-based Linux distributions might be using other package managers, such as `yum` or `tdnf`.
 
 - Download the repo config package:
 > [!IMPORTANT]
 >Make sure to replace the distribution and version with the appropriate strings.
 ````bash
-curl -sSL -O https://packages.microsoft.com/config/<distribution>/<version>/packages-microsoft-prod.rpm`
+curl -sSL -O https://packages.microsoft.com/config/<distribution>/<version>/packages-microsoft-prod.rpm
 ````
 - Install the repo config package:
 ````bash
