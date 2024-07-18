@@ -5,7 +5,7 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 11/14/2023
+ms.date: 07/18/2024
 ---
 
 # Linux Software Repository for Microsoft Products
@@ -36,6 +36,12 @@ The following Microsoft products are a few examples that offer Linux versions su
 
 > [!IMPORTANT]
 > Packages in the Linux Software Repository are subject to the license terms located in each package. Please read the license terms prior to using the package. Your installation and use of the package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use the package.
+
+### Network Policy and DNS Considerations
+
+The majority of Linux Software Repository users will be able to access [https://packages.microsoft.com](https://packages.microsoft.com) without issue. However, if your scenario requires SQL packages, and if you work in an environment using network policy to restrict access to certain domains, you will also need to enable access to `https://pmc-geofence.trafficmanager.net`.
+
+SQL is a paid product, so to comply with regional tax laws, a geofence was enabled specifically for these packages. When your package client tries to download a SQL package, for example `mssql-server-ha.deb`, packages.microsoft.com will redirect your client to `https://pmc-geofence.trafficmanager.net` to fulfill the request. This secondary domain ensures the packages are delivered to you from a server within your geographic area.
 
 ## How to use the GPG Repository Signing Key
 
