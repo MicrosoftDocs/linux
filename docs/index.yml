@@ -19,26 +19,26 @@ productDirectory:
   items:
       # Card
     - title: Create a Linux VM
-      imageSrc: /media/images/create-linux-vm.svg
+      imageSrc: ./media/images/create-linux-vm.svg
       summary: Microsoft supports a variety of options for setting up Linux VMs in Azure. Learn how to create one.
       # Card
     - title: Choose a method to install Linux
-      imageSrc: /media/images/install-linux.svg
+      imageSrc: ./media/images/install-linux.svg
       summary: Linux is an operating system, similar to Windows, but with many different versions due to the nature of being open source and fully customizable. To install Linux, choose an install method and choose a Linux distribution.
       url: /linux/packages
     # Card
     - title: How to install Linux on Windows with WSL
-      imageSrc: /media/images/wsl-icon.svg
+      imageSrc: ./media/images/wsl-icon.svg
       summary: Windows Subsystem for Linux (WSL) is a compatibility layer for running Linux binary executables natively on Windows. Learn how to install Linux on Windows with WSL.
       url: /azure/architecture/browse/?terms=linux
     # Card
     - title: Endorsed Linux distributions on Azure
-      imageSrc: /media/images/linux-tux-modern.png
+      imageSrc: ./media/images/linux-tux-modern.png
       summary: Microsoft endorses a variety of Linux distributions for use on Azure. Learn more about these distributions and how to use them.
       url: /azure/virtrual-machines/linux/endorsed-distros
     # Card
     - title: Linux Software Repository for Microsoft Products
-      imageSrc: /media/logos/logo_linux-color.svg
+      imageSrc: ./media/logos/logo_linux-color.svg
       summary: Microsoft builds and supports a variety of software products for Linux systems and makes them available via Linux packaging clients (apt, dnf, yum, etc) hosted on packages.microsoft.com.
       url: /linux/packages
     # Card
