@@ -11,17 +11,46 @@ metadata:
   ms.topic: hub-page
   author: mattwojo
   ms.author: mattwoj
-  ms.date: 10/27/2023
+  ms.date: 08/05/2024
 
 productDirectory:
-  title: Microsoft tools that run on Linux
+  title: Linux in the Microsoft Ecosystem
   summary: Microsoft supports Linux with a variety of different tools and services. If you’re using Linux you may be interested in some of these resources.
   items:
       # Card
+    - title: Create a Linux VM
+      imageSrc: /media/logos/create-linux-vm.svg
+      summary: Microsoft supports a variety of options for setting up Linux VMs in Azure. Learn how to create one.
+      # Card
+    - title: Choose a method to install Linux
+      imageSrc: /media/logos/install-linux.svg
+      summary: Linux is an operating system, similar to Windows, but with many different versions due to the nature of being open source and fully customizable. To install Linux, choose an install method and choose a Linux distribution.
+      url: /linux/packages
+    # Card
+    - title: How to install Linux on Windows with WSL
+      imageSrc: /media/logos/wsl-icon.svg
+      summary: Windows Subsystem for Linux (WSL) is a compatibility layer for running Linux binary executables natively on Windows. Learn how to install Linux on Windows with WSL.
+      url: /azure/architecture/browse/?terms=linux
+    # Card
+    - title: Endorsed Linux distributions on Azure
+      imageSrc: /media/logos/linux-tux-modern.png
+      summary: Microsoft endorses a variety of Linux distributions for use on Azure. Learn more about these distributions and how to use them.
+      url: /azure/virtrual-machines/linux/endorsed-distros
+    # Card
     - title: Linux Software Repository for Microsoft Products
       imageSrc: /media/logos/logo_linux-color.svg
       summary: Microsoft builds and supports a variety of software products for Linux systems and makes them available via Linux packaging clients (apt, dnf, yum, etc) hosted on packages.microsoft.com.
       url: /linux/packages
+    # Card
+    - title: Azure Linux (CBL-Mariner)
+      imageSrc: /media/logos/logo_azure.svg
+      summary: Azure Linux (aka CBL-Mariner) is an open-source Linux distribution created by Microsoft. It's optimized for running container workloads on Azure Kubernetes Service (AKS). 
+      url: https://github.com/microsoft/azurelinux
+    # Card
+    - title: Azure Linux container host for AKS
+      imageSrc: /media/logos/logo_kubernetes.svg
+      summary: The Azure Linux Container Host is an operating system image that's optimized for running container workloads on Azure Kubernetes Service (AKS). It's maintained by Microsoft and based on Microsoft Azure Linux, an open-source Linux distribution created by Microsoft.
+      url: /azure/azure-linux/
     # Card
     - title: Install .NET on Linux
       imageSrc: /media/logos/logo_NET.svg
@@ -47,32 +76,7 @@ productDirectory:
       imageSrc: /media/common/i_threat-protection.svg
       summary: Get a unified view of threats and alerts for your environment in the Microsoft 365 Defender portal empowering you to more quickly assess and respond to these threats. Learn how to install, configure, update, and use Microsoft Defender for Endpoint on Linux.
       url: /microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux
-    # Card
-    - title: Azure Linux container host for AKS
-      imageSrc: /media/logos/logo_kubernetes.svg
-      summary: The Azure Linux Container Host is an operating system image that's optimized for running container workloads on Azure Kubernetes Service (AKS). It's maintained by Microsoft and based on Microsoft Azure Linux, an open-source Linux distribution created by Microsoft.
-      url: /azure/azure-linux/
-    # Card
-    - title: Install the Azure CLI on Linux
-      imageSrc: /media/logos/logo_azure.svg
-      summary: The Azure Command-Line Interface (CLI) is a cross-platform command-line tool to connect to Azure and execute administrative commands on Azure resources. It allows the execution of commands through a terminal using interactive command-line prompts or a script. 
-      url: /cli/azure/install-azure-cli-linux
-    # Card
-    - title: Install Azure PowerShell on Linux
-      imageSrc: /media/logos/logo_azure.svg
-      summary: Azure PowerShell is a collection of cross-platform modules that enable you to manage all Azure resources. Its discoverable commands use `Verb-Noun` syntax, produce object-oriented output, and offer powerful automation features. 
-      url: /powershell/azure/install-azps-linux
-    # Card
-    - title: Install Azure Data Studio on Linux
-      imageSrc: /media/logos/logo_azure.svg
-      summary: Use Azure Data Studio to query, design, and manage your databases and data warehouses wherever they are, on your local computer or in the cloud. You can install Azure Data Studio on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), Ubuntu, Debian, and Windows Subsystem for Linux (WSL). 
-      url: /sql/azure-data-studio/download-azure-data-studio#linux-installation
-    # Card
-    - title: Azure Linux (CBL-Mariner)
-      imageSrc: /media/logos/logo_azure.svg
-      summary: Azure Linux (aka CBL-Mariner) is an open-source Linux distribution created by Microsoft. It's optimized for running container workloads on Azure Kubernetes Service (AKS). 
-      url: https://github.com/microsoft/azurelinux
-
+      
 # conceptualContent section (Optional; Remove if not applicable.)
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -81,31 +85,6 @@ conceptualContent:
     - title: Linux in the Microsoft Ecosystem
       summary: Linux is an open source, customizable, operating system with many different versions, called distributions. We can help you choose one and get started.
       items:
-      # Card
-      - title: How to download and install Linux
-        links:
-          - text: Step 1 - Choose a method to install Linux
-            url: /linux/install#step-1---choose-a-method-to-install-linux
-            itemType: tutorial
-          - text: Windows Subsystem for Linux (WSL)
-            url: /linux/install#windows-subsystem-for-linux-wsl
-            itemType: concept
-          - text: Create a Virtual Machine (VM)
-            url: /linux/install#create-a-virtual-machine-vm
-            itemType: concept
-          - text: Bare metal Linux
-            url: /linux/install#bare-metal-linux
-            itemType: concept
-          - text: Step 2 - Choose a Linux distribution
-            url: /linux/install#step-2---choose-a-linux-distribution
-            itemType: tutorial
-          - text: Step 3 - Follow install method instructions
-            url: /linux/install#step-3---follow-install-method-instructions
-            itemType: tutorial
-          - text: Step 4 - After installing Linux
-            url: /linux/install#step-4---after-installing-linux
-            itemType: tutorial
-          
         # Card
       - title: How to install Microsoft software packages using the Linux Repository
         links:
@@ -199,7 +178,7 @@ additionalContent:
             summary: Learn how to create a data model with Azure data studio. Create indexes, tables and use data types to help develop your applications.
             url: /training/modules/design-a-data-model-with-ads/
 
-    - title: Cloud Solution Architecture for Linux
+    - title: Cloud Solution Architecture for Linux (REMOVE ME)
       summary: Cloud Solution Architecture makes your complex Linux workloads more scalable, secure and manageable. Consider migrating or building a new system on Azure.
       items:
         # Card
