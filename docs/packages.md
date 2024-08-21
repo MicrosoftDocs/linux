@@ -102,15 +102,11 @@ To search what Microsoft packages are available after installing, change to the 
 
 The Red Hat Package Manager (rpm) instructions assume that the package management client command is `dnf` but some rpm-based Linux distributions might be using other package managers, such as `yum` or `tdnf`.
 
-- Download the repo config package:
+- Install the repo config package:
 > [!IMPORTANT]
 >Make sure to replace the distribution and version with the appropriate strings.
 ````bash
-curl -sSL -O https://packages.microsoft.com/config/<distribution>/<version>/packages-microsoft-prod.rpm
-````
-- Install the repo config package:
-````bash
-sudo rpm -i packages-microsoft-prod.rpm
+sudo rpm -i https://packages.microsoft.com/config/<distribution>/<version>/packages-microsoft-prod.rpm
 ````
 - Delete the repo config package after installing:
 ````bash
@@ -126,15 +122,11 @@ sudo dnf install <package-name>
 ````
 As an example of a pckage client that uses `yum`, the steps may be slightly different.
 
-- Download the repo config package:
+- Install the repo config package:
 > [!IMPORTANT]
 >Make sure to replace the distribution and version with the appropriate strings.
 ````bash
-curl -sSL -O https://packages.microsoft.com/config/<distribution>/<version>/packages-microsoft-prod.rpm
-````
-- Install the repo config package:
-````bash
-sudo rpm -i packages-microsoft-prod.rpm
+sudo rpm -i https://packages.microsoft.com/config/<distribution>/<version>/packages-microsoft-prod.rpm
 ````
 - Update package index files:
 ````bash
