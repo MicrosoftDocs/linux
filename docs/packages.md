@@ -51,6 +51,14 @@ Linux Software Repository for Microsoft Products uses the GPG (GNU Privacy Guard
 - Public Key ID: Microsoft (Release signing) `gpgsecurity@microsoft.com`
 - Public Key Fingerprint: `BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
 
+## [Preview] Snapshot support
+PMC provides preview support for [repository snapshots](https://packages.microsoft.com/snapshot) for select Ubuntu repositories, providing a way to access historical versions of these repositories. This feature allows users to view and install packages as they existed at specific points in time, enabling reproducible deployments and helping identify changes in package behavior over time. By using snapshots, you can recreate environments from any given date/time, which is particularly useful for tracking down when changes or regressions were introduced. Snapshots ensure that a validated environment can be consistently replicated across different stages of development and production, supporting a structured update workflow. This feature is similar to [snapshot.debian.org](https://snapshot.debian.org/) and [snapshot.ubuntu.com](https://snapshot.ubuntu.com/).
+
+Snapshots are created automatically when a repository is updated, provided the previous snapshot is at least 7 days old. Repository administrators can also manually create snapshots as needed. Each snapshot is identified by a UTC timestamp in the URL, representing the time it was created at. If a snapshot for the exact timestamp specified in the request's URL is unavailable, the request will be redirected to the most recent snapshot created before the specified timestamp. This means that a request of a repository snapshot at timestamp x doesn't have to reflect the repository state at x, but rather
+the snapshot created at or before x.
+
+Please note that this feature is currently in preview and is not recommended for production workloads. At this time, there is no ETA for moving beyond preview status or for expanding support to additional repositories. For more information, check [Pulp's checkpoint documentation](https://pulpproject.org/pulpcore/docs/user/guides/checkpoint/) which is the basis of the snapshot support in PMC.
+
 ## Command examples for using the Linux repository service
 
 The following commands will configure your Linux OS to install packages from packages.microsoft.com. There are instructions for deb-based systems (e.g. Debian, Ubuntu) and rpm-based systems (e.g. Fedora, RHEL).
