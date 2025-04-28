@@ -51,6 +51,11 @@ Linux Software Repository for Microsoft Products uses the GPG (GNU Privacy Guard
 - Public Key ID: Microsoft (Release signing) `gpgsecurity@microsoft.com`
 - Public Key Fingerprint: `BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
 
+As of May 2025, a new key has been introduced. This is primarily to support RHEL 10 and similar releases, which have strict requirements around signing keys. Note that this change in policy does not indicate a lack of trust in the existing key, which will continue to be used for existing repositories.
+- This new public key may be downloaded here: [https://packages.microsoft.com/keys/microsoft-2025.asc](https://packages.microsoft.com/keys/microsoft-2025.asc)
+- Public Key ID: Microsoft (Release signing) `Microsoft Corporation - General GPG Signer <gpgsign@microsoft.com>`
+- Public Key Fingerprint: `AA86 F75E 427A 19DD 3334 6403 EE4D 7792 F748 182B`
+
 ## Command examples for using the Linux repository service
 
 The following commands will configure your Linux OS to install packages from packages.microsoft.com. There are instructions for deb-based systems (e.g. Debian, Ubuntu) and rpm-based systems (e.g. Fedora, RHEL).
@@ -180,6 +185,15 @@ Resources that are subject to change include:
 - The HTML/directory browsing interface is enabled only for interactive web browsing and is not a stable or supported API. This includes the underlying structure of the HTML, as well as, the timestamp and filesize presented.
 - Package repositories often contain multiple copies of the same data in different formats. There's no guarantee that each format will be supported. For example,  Debian repositories *may* include `Packages`, `Packages.bz2`, `Packages.gz`, etc. Rpm repositories *may* include `primary.xml.gz` or `primary.sqlite.bz2`, etc. Package managers will generally prefer one of these formats, but accept an array of format options.
 - Clamav signatures located under `/clamav` will no longer be supported, with deprecation scheduled in 2023.
+
+## Deprecated Support for Legacy Domain Names
+
+Historically, packages.microsoft.com content was available on a second domain name: apt-mo.trafficmanager.net.
+This is a historical artifact from a time when packages.microsoft.com was not yet an official public offering.
+In May of 2025, we will be deprecating support for this domain name.
+Requests sent to this domain will be redirected to packages.microsoft.com to prevent impact.
+Customers using apt-mo.trafficmanager.net are encouraged to update their repo references to prevent any future issues.
+This change will bring performance improvements, including better cache efficiency and faster cache purging operations.
 
 ## How to file an issue, request a feature, or report a security vulnerability
 
