@@ -5,7 +5,7 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 07/18/2024
+ms.date: 04/28/2025
 ---
 
 # Linux Software Repository for Microsoft Products
@@ -51,8 +51,9 @@ Linux Software Repository for Microsoft Products uses the GPG (GNU Privacy Guard
 - Public Key ID: Microsoft (Release signing) `gpgsecurity@microsoft.com`
 - Public Key Fingerprint: `BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
 
-As of May 2025, a new key has been introduced. This is primarily to support RHEL 10 and similar releases, which have strict requirements around signing keys. Note that this change in policy does not indicate a lack of trust in the existing key, which will continue to be used for existing repositories.
-- This new public key may be downloaded here: [https://packages.microsoft.com/keys/microsoft-2025.asc](https://packages.microsoft.com/keys/microsoft-2025.asc)
+As of May 2025, a new key has been introduced. This is primarily to support RHEL 10 and similar releases, which have strict requirements around signing keys. This change in policy does not indicate a lack of trust in the existing key, which will continue to be used for existing repositories.
+
+- The new public key may be downloaded here: [https://packages.microsoft.com/keys/microsoft-2025.asc](https://packages.microsoft.com/keys/microsoft-2025.asc)
 - Public Key ID: Microsoft (Release signing) `Microsoft Corporation - General GPG Signer <gpgsign@microsoft.com>`
 - Public Key Fingerprint: `AA86 F75E 427A 19DD 3334 6403 EE4D 7792 F748 182B`
 
