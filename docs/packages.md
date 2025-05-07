@@ -5,7 +5,7 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 04/28/2025
+ms.date: 05/07/2025
 ---
 
 # Linux Software Repository for Microsoft Products
@@ -50,6 +50,20 @@ Linux Software Repository for Microsoft Products uses the GPG (GNU Privacy Guard
 - Microsoft's GPG public key may be downloaded here: [https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
 - Public Key ID: Microsoft (Release signing) `gpgsecurity@microsoft.com`
 - Public Key Fingerprint: `BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
+
+## Snapshot support [Preview]
+
+Preview support for [repository snapshots](https://packages.microsoft.com/snapshot) is now available on PMC (packages.microsoft.com). With PMC Snapshots, you can explore historical versions of specific Ubuntu repositories. The snapshot feature allows users to view and install packages as they existed at specific points in time, enabling reproducible deployments and helping to identify changes in package behavior over time. By using snapshots, you can recreate environments from any given date and time, which is particularly useful for tracking down when changes or regressions were introduced. Snapshots ensure that a validated environment can be consistently replicated across different stages of development and production, supporting a structured update workflow. This feature is similar to [snapshot.debian.org](https://snapshot.debian.org/) and [snapshot.ubuntu.com](https://snapshot.ubuntu.com/).
+
+### How to create snapshots
+
+Snapshots are created automatically when a repository is updated, provided the previous snapshot is at least 7 days old. Repository administrators can also manually create snapshots as needed. 
+
+Index of Packages.microsoft.com snapshots:[https://packages.microsoft.com/snapshot/](https://packages.microsoft.com/snapshot/).
+
+To access repository snapshots, go to the repository's snapshot path (like `https://packages.microsoft.com/snapshot/ubuntu/24.04/prod/`). Snapshots are identified by a UTC timestamp in their URL, representing the time it was created, such as `https://packages.microsoft.com/snapshot/ubuntu/24.04/prod/20250501T193230Z/` for the 2025-05-01T19:32:30Z UTC state. Snapshots can be accessed using an arbitrary timestamp. When requesting a snapshot with a specific timestamp, if an exact match isn't found, you'll be redirected to the latest snapshot created before that time. Requesting a future or pre-first-snapshot timestamp will return a 404 error.
+
+This feature is **currently in preview and is not recommended for production workloads**. Currently, there is no ETA for moving beyond preview status or for expanding support to additional repositories. For more information, check [Pulp's checkpoint documentation](https://pulpproject.org/pulpcore/docs/user/guides/checkpoint/) which is the basis of the snapshot support in PMC.
 
 As of May 2025, a new key has been introduced. This is primarily to support RHEL 10 and similar releases, which have strict requirements around signing keys. This change in policy does not indicate a lack of trust in the existing key, which will continue to be used for existing repositories.
 
