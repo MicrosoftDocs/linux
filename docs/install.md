@@ -4,7 +4,7 @@ description: Download and install Linux in this tutorial that covers how to choo
 author: mattwojo 
 ms.author: mattwoj 
 manager: jken
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.date: 01/22/2024
 ---
 
