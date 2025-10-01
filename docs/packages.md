@@ -47,9 +47,14 @@ SQL is a paid product, so to comply with regional tax laws, a geofence was enabl
 
 Linux Software Repository for Microsoft Products uses the GPG (GNU Privacy Guard) enabling users to verify the authenticity of files and to check the signatures of downloaded packages.
 
-- Microsoft's GPG public key may be downloaded here: [https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
+Microsoft's Legacy GPG public key may be downloaded here: [https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
 - Public Key ID: Microsoft (Release signing) `gpgsecurity@microsoft.com`
 - Public Key Fingerprint: `BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
+
+
+Microsoft's New (as of 2025) GPG public key may be downloaded here: [https://packages.microsoft.com/keys/microsoft-2025.asc](https://packages.microsoft.com/keys/microsoft-2025.asc)
+- Public Key ID: Microsoft Corporation - General GPG Signer `gpgsign@microsoft.com`
+- Public Key Fingerprint: `AA86 F75E 427A 19DD 3334 6403 EE4D 7792 F748 182B`
 
 ## Snapshot support [Preview]
 
