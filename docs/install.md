@@ -6,6 +6,7 @@ ms.author: mattwoj
 manager: jken
 ms.topic: install-set-up-deploy
 ms.date: 01/22/2024
+ms.custom: sfi-image-nochange
 ---
 
 # How to download and install Linux
