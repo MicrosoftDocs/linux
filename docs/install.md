@@ -6,6 +6,7 @@ ms.author: mattwoj
 manager: jken
 ms.topic: install-set-up-deploy
 ms.date: 01/22/2024
+ms.custom: sfi-image-nochange
 ---
 
 # How to download and install Linux
@@ -135,7 +136,7 @@ Azure supports a variety of options for setting up Linux VMs in the cloud. For a
 - [A Bicep file](/azure/virtual-machines/linux/quick-create-bicep?tabs=CLI) 
 - [Azure Resource Manager (ARM) template](/azure/virtual-machines/linux/quick-create-template)
 
-If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin. If you're new to creating Linux VMs with Azure, you can [learn more about VMs](https://azure.microsoft.com/resources/cloud-computing-dictionary/what-is-a-virtual-machine) or check out the online training course: [Create a Linux virtual machine in Azure](/training/modules/create-linux-virtual-machine-in-azure/).
+If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin. If you're new to creating Linux VMs with Azure, you can [learn more about VMs](https://azure.microsoft.com/resources/cloud-computing-dictionary/what-is-a-virtual-machine) or check out the online training course: [Create a Linux virtual machine in Azure](/training/modules/create-linux-virtual-machine-in-azure/).
 
 ![Select Linux VM size on Azure screenshot](./images/create-linux-vm-on-azure-size.png)
 
