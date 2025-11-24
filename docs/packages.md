@@ -5,7 +5,7 @@ author: mattwojo
 ms.author: mattwoj 
 manager: jken
 ms.topic: article
-ms.date: 05/07/2025
+ms.date: 10/01/2025
 ---
 
 # Linux Software Repository for Microsoft Products
@@ -23,6 +23,22 @@ The Linux Software Repository can be configured to automatically install the Lin
 > [!NOTE]
 > Optionally, if you prefer manual configuration, the Linux Software Repository configuration files are available at [https://packages.microsoft.com/config](https://packages.microsoft.com/config/). The name and location of these files can be located using the following URI naming convention:
 `https://packages.microsoft.com/config/<Distribution>/<Version>/prod.(repo|list)`
+
+### Directory structure
+
+At the root of packages.microsoft.com, you’ll see folders like:
+
+- `/config/<distro>/<version>/prod.list`: Contains repo configuration files for each supported distribution.
+- `/repos/`: Contains product-specific repositories (for example, edge, azure-cli, microsoft-prod).
+- `/ubuntu/`: Contains distribution-specific repos for Microsoft packages that integrate with Ubuntu’s APT system.
+
+A few things to keep in mind regarding the packages.microsoft.com repo structure:
+
+- The packages.microsoft.com repository is public and designed for programmatic consumption by package managers, not for manual browsing, though directory listing is enabled for convenience.
+- The repos tree is product-centric, not distribution-centric. For example: `repos/edge/`, `repos/azure-cli/`, repos/microsoft-prod/', etc. Each contains metadata for multiple distributions, so the same product repo can serve Ubuntu, Debian, etc.
+- This differs from Ubuntu’s pool/main structure, which is strictly tied to Debian policy and archive layout.Ubuntu’s main pool is controlled by Canonical and only includes open-source or vetted packages, so proprietary software, such as Microsoft Edge, cannot be included there. This separation ensures Microsoft is able to directly provide updates and signing keys, as well as compliance with licensing (Microsoft Edge is closed-source). It also enables faster delivery of new versions without waiting for Ubuntu’s release cycle.
+- Microsoft uses a centralized model rather than duplicating packages under each `distro` folder. This avoids redundancy and simplifies publishing across multiple Linux distributions.
+- When you install the Microsoft repo config (packages-microsoft-prod.deb), it adds the correct deb `[arch=amd64] https://packages.microsoft.com/repos/edge` stable main line for your Linux distribution. APT then uses Microsoft’s metadata (Release, Packages.gz) to resolve dependencies. The actual `.deb` files live under `repos/edge/pool/main/...`, but you should never hardcode those paths because the APT package manager handles it.
 
 ### Examples of available Microsoft products in the Linux Repository
 
