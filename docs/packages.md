@@ -1,9 +1,9 @@
 ---
 title: Linux Software Repository for Microsoft Products
 description: Learn how to install Microsoft products on Linux using the packages.microsoft.com (PMC) service and how this service supports various package managers.
-author: mattwojo 
-ms.author: mattwoj 
-manager: jken
+author: fossygirl 
+ms.author: carols 
+manager: rayoflores
 ms.topic: article
 ms.date: 05/07/2025
 ---
