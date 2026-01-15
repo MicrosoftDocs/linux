@@ -1,9 +1,9 @@
 ---
 title: How to download and install Linux
 description: Download and install Linux in this tutorial that covers how to choose a distribution, how to use the install command with Windows Subsystem for Linux, create a bootable USB for Bare-metal, or set up a Virtual Machine.
-author: mattwojo 
-ms.author: mattwoj 
-manager: jken
+author: fossygirl 
+ms.author: carols 
+manager: rayoflores
 ms.topic: install-set-up-deploy
 ms.date: 01/22/2024
 ms.custom: sfi-image-nochange
