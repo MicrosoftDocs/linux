@@ -45,8 +45,7 @@ SQL is a paid product, so to comply with regional tax laws, a geofence was enabl
 
 ## How to use the GPG Repository Signing Key
 
-Linux Software Repository for Microsoft Products uses GPG (GNU Privacy Guard) enabling users to verify the authenticity of files and to check the signatures of downloaded packages.
-In an effort to meet evolving security requirements, multiple keys are used across different repositories.
+Linux Software Repository for Microsoft Products uses GPG (GNU Privacy Guard) enabling users to verify the authenticity of files and to check the signatures of downloaded packages. In an effort to meet evolving security requirements, multiple keys are used across different repositories.
 
 Customers are encouraged to use the configuration packages, located under https://packages.microsoft.com/config/, to ensure they acquire the correct key for a given repository.
 
@@ -55,7 +54,6 @@ Microsoft-2025.asc
 - This key is associated with repositories created after April 2025, including RHEL 10, Debian 13, and Ubuntu 25.10
 - Public Key ID: Microsoft (Release signing) `Microsoft Corporation - General GPG Signer <gpgsign@microsoft.com>`
 - Public Key Fingerprint: `AA86 F75E 427A 19DD 3334 6403 EE4D 7792 F748 182B`
-
 
 Microsoft.asc
 - Microsoft's original public GPG key may be downloaded here: [https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
