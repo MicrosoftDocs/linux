@@ -49,13 +49,13 @@ Linux Software Repository for Microsoft Products uses GPG (GNU Privacy Guard) en
 
 Customers are encouraged to use the configuration packages, located under https://packages.microsoft.com/config/, to ensure they acquire the correct key for a given repository.
 
-Microsoft-2025.asc
+### `microsoft-2025.asc`
 - Microsoft's latest GPG public key may be downloaded here: [https://packages.microsoft.com/keys/microsoft-2025.asc](https://packages.microsoft.com/keys/microsoft-2025.asc)
 - This key is associated with repositories created after April 2025, including RHEL 10, Debian 13, and Ubuntu 25.10
 - Public Key ID: Microsoft (Release signing) `Microsoft Corporation - General GPG Signer <gpgsign@microsoft.com>`
 - Public Key Fingerprint: `AA86 F75E 427A 19DD 3334 6403 EE4D 7792 F748 182B`
 
-Microsoft.asc
+### `microsoft.asc`
 - Microsoft's original public GPG key may be downloaded here: [https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
 - This key is associated with repositories created before May 2025, including RHEL 9, Debian 12, and Ubuntu 25.04
 - Public Key ID: Microsoft (Release signing) `gpgsecurity@microsoft.com`
@@ -69,7 +69,7 @@ Preview support for [repository snapshots](https://packages.microsoft.com/snapsh
 
 Snapshots are created automatically when a repository is updated, provided the previous snapshot is at least 7 days old. Repository administrators can also manually create snapshots as needed. 
 
-Index of Packages.microsoft.com snapshots:[https://packages.microsoft.com/snapshot/](https://packages.microsoft.com/snapshot/).
+Index of Packages.microsoft.com snapshots: [https://packages.microsoft.com/snapshot/](https://packages.microsoft.com/snapshot/).
 
 To access repository snapshots, go to the repository's snapshot path (like `https://packages.microsoft.com/snapshot/ubuntu/24.04/prod/`). Snapshots are identified by a UTC timestamp in their URL, representing the time it was created, such as `https://packages.microsoft.com/snapshot/ubuntu/24.04/prod/20250501T193230Z/` for the 2025-05-01T19:32:30Z UTC state. Snapshots can be accessed using an arbitrary timestamp. When requesting a snapshot with a specific timestamp, if an exact match isn't found, you'll be redirected to the latest snapshot created before that time. Requesting a future or pre-first-snapshot timestamp will return a 404 error.
 
