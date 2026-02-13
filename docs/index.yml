@@ -63,11 +63,6 @@ productDirectory:
       summary: Azure PowerShell is a collection of cross-platform modules that enable you to manage all Azure resources. Its discoverable commands use `Verb-Noun` syntax, produce object-oriented output, and offer powerful automation features. 
       url: /powershell/azure/install-azps-linux
     # Card
-    - title: Install Azure Data Studio on Linux
-      imageSrc: /media/logos/logo_azure.svg
-      summary: Use Azure Data Studio to query, design, and manage your databases and data warehouses wherever they are, on your local computer or in the cloud. You can install Azure Data Studio on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), Ubuntu, Debian, and Windows Subsystem for Linux (WSL). 
-      url: /sql/azure-data-studio/download-azure-data-studio#linux-installation
-    # Card
     - title: Azure Linux (CBL-Mariner)
       imageSrc: /media/logos/logo_azure.svg
       summary: Azure Linux (aka CBL-Mariner) is an open-source Linux distribution created by Microsoft. It's optimized for running container workloads on Azure Kubernetes Service (AKS). 
@@ -195,9 +190,6 @@ additionalContent:
           - title: Learn to use Bash with the Azure CLI (Training)
             summary: A tutorial on how to use the Azure CLI in a Bash environment, write queries, format output, create objects using variables and randomization, create a storage account, handle errors, clean up resources, and more.
             url: /cli/azure/azure-cli-learn-bash
-          - title: Design a Performant Data Model in Azure SQL Database with Azure Data Studio (Training)
-            summary: Learn how to create a data model with Azure data studio. Create indexes, tables and use data types to help develop your applications.
-            url: /training/modules/design-a-data-model-with-ads/
 
     - title: Cloud Solution Architecture for Linux
       summary: Cloud Solution Architecture makes your complex Linux workloads more scalable, secure and manageable. Consider migrating or building a new system on Azure.
