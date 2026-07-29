@@ -5,7 +5,7 @@ author: fossygirl
 ms.author: carols 
 manager: rayoflores
 ms.topic: article
-ms.date: 05/07/2025
+ms.date: 07/08/2026
 ---
 
 # Linux Software Repository for Microsoft Products
@@ -84,57 +84,45 @@ If you're unsure what distribution and version you are currently running, you ca
 ### Debian-based Linux distributions
 
 - Download the repo config package:
-> [!IMPORTANT]
->Make sure to replace the distribution and version with the appropriate strings.
 ````bash
-curl -sSL -O https://packages.microsoft.com/config/<distribution>/<version>/packages-microsoft-prod.deb
+source /etc/os-release
+curl -sSL -O https://packages.microsoft.com/config/$ID/$VERSION_ID/packages-microsoft-prod.deb
 ````
+> [!IMPORTANT]
+> If no file is downloaded, browse the packages available at [packages.microsoft.com](https://packages.microsoft.com/config/) and find the package appropriate for your specific Linux distribution and version
+
 - Install the repo config package:
 ````bash
-sudo dpkg -i packages-microsoft-prod.deb
+sudo apt install ./packages-microsoft-prod.deb
 ````
+
 - Delete the repo config package after installing:
 ````bash
 rm packages-microsoft-prod.deb
 ````
+
 - Update package index files:
 ````bash
 sudo apt-get update
 ````
+
 - To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com): `sudo apt-get install <package-name>`
-
-See [packages.microsoft.com](https://packages.microsoft.com/) to find the list of supported Linux distributions and versions. 
-
-In this example, entering `cat /etc/os-release` shows that Ubuntu, version 20.04, is running. Visiting [packages.microsoft.com](https://packages.microsoft.com/), we can see Ubuntu 20.04 on the list. To download the packages.microsoft.com repo, cURL is used to download with the command:
-````bash
-curl -sSL -O https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
-````
-The repo config package is then installed with the command:
-````bash
-sudo dpkg -i packages-microsoft-prod.deb
-````
-And then deleted as not to take up space.
-
-The list of packages is then updated with the apt package manager using the command:
-````bash
-sudo apt-get update
-````
 
 To search what Microsoft packages are available after installing, change to the root directory of your Linux distribution: `cd /` and look in the directory: `/var/lib/apt/lists`. You will see a list of files with titles something like: `packages.microsoft.com_ubuntu_20.04_prod_dists_focal_main_binary-all_Packages`. You can open this file in a text editor (for example, `nano <file-name>`) to see a list of the available packages.
 
 ### Red Hat-based Linux distributions
 
-The Red Hat Package Manager (rpm) instructions assume that the package management client command is `dnf` but some rpm-based Linux distributions might be using other package managers, such as `yum` or `tdnf`.
-
 - Download the repo config package:
-> [!IMPORTANT]
->Make sure to replace the distribution and version with the appropriate strings.
 ````bash
-curl -sSL -O https://packages.microsoft.com/config/<distribution>/<version>/packages-microsoft-prod.rpm
+source /etc/os-release
+curl -sSL -O https://packages.microsoft.com/config/$ID/${VERSION_ID%%.*}/packages-microsoft-prod.rpm
 ````
+> [!IMPORTANT]
+> If no file is downloaded, browse the packages available at [packages.microsoft.com](https://packages.microsoft.com/config/) and find the package appropriate for your specific Linux distribution and version
+
 - Install the repo config package:
 ````bash
-sudo rpm -i packages-microsoft-prod.rpm
+sudo dnf install ./packages-microsoft-prod.rpm
 ````
 - Delete the repo config package after installing:
 ````bash
@@ -148,36 +136,13 @@ sudo dnf update
 ````bash
 sudo dnf install <package-name>
 ````
-As an example of a pckage client that uses `yum`, the steps may be slightly different.
-
-- Download the repo config package:
-> [!IMPORTANT]
->Make sure to replace the distribution and version with the appropriate strings.
-````bash
-curl -sSL -O https://packages.microsoft.com/config/<distribution>/<version>/packages-microsoft-prod.rpm
-````
-- Install the repo config package:
-````bash
-sudo rpm -i packages-microsoft-prod.rpm
-````
-- Update package index files:
-````bash
-sudo yum update
-````
-- To install the Microsoft product package you're after using this Linux repository (packages.microsoft.com):
-````bash
-sudo yum install <package-name>
-````
-See [packages.microsoft.com](https://packages.microsoft.com/) to find the list of supported Linux distributions and versions. Once the packages.microsoft.com repo has been installed an updated, you can use the package manager to list the packages available from Microsoft.
+Once the packages.microsoft.com repo has been installed an updated, you can use the package manager to list the packages available from Microsoft.
 
 For example:
 ````bash
-dnf repository-packages packages-microsoft-com-prod list
+sudo  dnf repository-packages packages-microsoft-com-prod list
 ````
-or
-````bash
-yum repo-pkgs packages-microsoft-com-prod list
-````
+
 ## Recommendations for client package resources supported by a static interface
 
 Recommendations for using the resources on packages.microsoft.com include:
